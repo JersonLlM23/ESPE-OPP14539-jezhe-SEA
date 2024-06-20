@@ -8,7 +8,7 @@ package ec.edu.espe.academygradessystem.view;
  *
  * @author IAEN
  */
-public class User {
+class User {
     private String username;
     private String password;
 

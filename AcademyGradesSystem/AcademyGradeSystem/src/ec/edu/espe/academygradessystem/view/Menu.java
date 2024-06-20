@@ -63,41 +63,36 @@ public class Menu {
     }
 
     private void registerUser() {
-    System.out.print("Enter username: ");
-    String username = scanner.nextLine();
-    Console console = System.console();
-    String password;
+        System.out.print("Enter username: ");
+        String username = scanner.nextLine();
+        String password = readPassword("Enter password: ");
 
-    if (console == null) {
-        System.out.print("Enter password: ");
-        password = scanner.nextLine();
-    } else {
-        password = new String(console.readPassword("Enter password: "));
+        if (password == null) {
+            System.out.println("Registration failed. Password cannot be read.");
+            return;
+        }
+
+        try {
+            User newUser = new User(username, password);
+            users.add(newUser);
+            saveUsers();
+            System.out.println("User registered successfully.");
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Registration failed. Please try again with a valid password.");
+        }
     }
-
-    try {
-        User newUser = new User(username, password);
-        users.add(newUser);
-        saveUsers();
-        System.out.println("User registered successfully.");
-    } catch (IllegalArgumentException e) {
-        System.out.println(e.getMessage());
-        System.out.println("Registration failed. Please try again with a valid password.");
-    }
-}
-
 
     private boolean loginUser() {
         System.out.print("Enter username: ");
         String username = scanner.nextLine();
-        Console console = System.console();
-        String password;
-        if (console == null) {
-            System.out.print("Enter password: ");
-            password = scanner.nextLine();
-        } else {
-            password = new String(console.readPassword("Enter password: "));
+        String password = readPassword("Enter password: ");
+
+        if (password == null) {
+            System.out.println("Login failed. Password cannot be read.");
+            return false;
         }
+
         for (User user : users) {
             if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
                 System.out.println("Login successful.");
@@ -106,6 +101,18 @@ public class Menu {
         }
         System.out.println("Invalid username or password.");
         return false;
+    }
+
+    private String readPassword(String prompt) {
+        Console console = System.console();
+        if (console != null) {
+            char[] passwordArray = console.readPassword(prompt);
+            return new String(passwordArray);
+        } else {
+            System.out.println("Warning: Password will be visible while typing.");
+            System.out.print(prompt);
+            return scanner.nextLine();
+        }
     }
 
     private List<User> loadUsers() {

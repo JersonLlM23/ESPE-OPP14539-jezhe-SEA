@@ -242,7 +242,10 @@ public class AcademyGradesSystem {
                 case 15:
                     admin.saveData(students, STUDENT_FILE);
                     admin.saveData(professors, PROFESSOR_FILE);
-                    exit = true;
+                    
+                     exit = true;
+               
+               
                     break;
 
                 default:
