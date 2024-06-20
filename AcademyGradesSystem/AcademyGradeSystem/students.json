@@ -19,7 +19,6 @@
     "grades": []
   },
   {
-<<<<<<< HEAD
     "id": "4",
     "name": "Adrian Padilla",
     "age": 20,
@@ -36,23 +35,5 @@
     "major": "engineering",
     "gpa": 0.0,
     "grades": []
-  },
-  {
-    "id": "5",
-    "name": "Stiven Deyvid Pachacama Caiza",
-    "age": 21,
-    "major": "engineering",
-    "gpa": 0.0,
-    "grades": []
-=======
-    "id": "2100935929",
-    "name": "Jerson",
-    "age": 20,
-    "major": "Engineering",
-    "gpa": 10.0,
-    "grades": [
-      10.0
-    ]
->>>>>>> 3c4bd1f38f36c8722408e2412688941930e19604
   }
 ]
