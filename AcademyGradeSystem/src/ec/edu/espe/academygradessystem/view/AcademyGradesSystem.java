@@ -10,11 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import com.google.gson.reflect.TypeToken;
-import ec.edu.espe.academygradessystem.model.*;
-/**
- *
- * @author JEZHE Software Sssosiation Engineers - DCCO ESPE
- */
+import ec.edu.espe.academygradessystem.model.Administrator;
+import ec.edu.espe.academygradessystem.model.Professor;
+import ec.edu.espe.academygradessystem.model.Student;
+import java.io.Console;
 
 public class AcademyGradesSystem {
 
@@ -22,6 +21,12 @@ public class AcademyGradesSystem {
     private static final String PROFESSOR_FILE = "professors.json";
 
     public static void main(String[] args) {
+        // Create an instance of the Menu class and show the menu
+        Menu menu = new Menu();
+        menu.showMenu();
+    }
+
+    public static void startAdminSystem() {
         Scanner scanner = new Scanner(System.in);
         Administrator admin = new Administrator("A001", "Mr. Admin");
 
@@ -52,7 +57,7 @@ public class AcademyGradesSystem {
             System.out.println("13. Generate Student Report");
             System.out.println("14. Evaluate Student");
             System.out.println("15. Save and Exit\n");
-            System.out.print("ingrese su opcion: ");
+            System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -91,13 +96,13 @@ public class AcademyGradesSystem {
                         System.out.println("Enter new Student Name:");
                         String updateStudentName = scanner.nextLine();
                         System.out.println("Enter new Student Age:");
-                        int UpdateStudentAge = scanner.nextInt();
+                        int updateStudentAge = scanner.nextInt();
                         scanner.nextLine(); 
                         System.out.println("Enter new Student Major:");
-                        String UpdateStudentMajor = scanner.nextLine();
+                        String updateStudentMajor = scanner.nextLine();
                         student.setName(updateStudentName);
-                        student.setAge(UpdateStudentAge);
-                        student.setMajor(UpdateStudentMajor);
+                        student.setAge(updateStudentAge);
+                        student.setMajor(updateStudentMajor);
                         admin.updateStudent(students, studentId, student);
                     } else {
                         System.out.println("Student not found.");
@@ -138,11 +143,11 @@ public class AcademyGradesSystem {
                     professor = admin.readProfessor(professors, professorId);
                     if (professor != null) {
                         System.out.println("Enter new Professor Name:");
-                        String newprofessorName = scanner.nextLine();
+                        String newProfessorName = scanner.nextLine();
                         System.out.println("Enter new Professor Department:");
-                        String newprofessorDept = scanner.nextLine();
-                        professor.setName(newprofessorName);
-                        professor.setDepartment(newprofessorDept);
+                        String newProfessorDept = scanner.nextLine();
+                        professor.setName(newProfessorName);
+                        professor.setDepartment(newProfessorDept);
                         admin.updateProfessor(professors, professorId, professor);
                     } else {
                         System.out.println("Professor not found.");
@@ -237,7 +242,10 @@ public class AcademyGradesSystem {
                 case 15:
                     admin.saveData(students, STUDENT_FILE);
                     admin.saveData(professors, PROFESSOR_FILE);
-                    exit = true;
+                    
+                     exit = true;
+               
+               
                     break;
 
                 default:
@@ -260,3 +268,4 @@ public class AcademyGradesSystem {
         }
     }
 }
+

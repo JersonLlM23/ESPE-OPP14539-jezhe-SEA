@@ -6,7 +6,7 @@ package ec.edu.espe.academygradessystem.model;
 
 /**
  *
- * @author JEZHE Software Sssosiation Engineers - DCCO ESPE
+ * @author Ricardo Lainez JEZHE Software Sssosiation Engineers - DCCO ESPE
  */
 import com.google.gson.annotations.Expose;
 

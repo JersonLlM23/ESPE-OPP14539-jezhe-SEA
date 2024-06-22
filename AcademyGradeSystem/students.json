@@ -19,13 +19,21 @@
     "grades": []
   },
   {
-    "id": "2100935929",
-    "name": "Jerson",
+    "id": "4",
+    "name": "Adrian Padilla",
     "age": 20,
-    "major": "Engineering",
-    "gpa": 10.0,
+    "major": "engineering",
+    "gpa": 8.0,
     "grades": [
-      10.0
+      8.0
     ]
+  },
+  {
+    "id": "10",
+    "name": "Pablo Pedro Picasso Piedra",
+    "age": 19,
+    "major": "engineering",
+    "gpa": 0.0,
+    "grades": []
   }
 ]

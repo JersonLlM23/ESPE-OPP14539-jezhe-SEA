@@ -1,7 +1,12 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package ec.edu.espe.academygradessystem.model;
+
 /**
  *
- * @author JEZHE Software Sssosiation Engineers - DCCO ESPE
+ * @author Ricardo Lainez JEZHE Software Sssosiation Engineers - DCCO ESPE
  */
 import com.google.gson.annotations.Expose;
 import java.util.ArrayList;
