@@ -1,0 +1,192 @@
+{
+  "individualPayrolls": [
+    {
+      "employee": {
+        "name": "Pedro",
+        "lastName": "asto",
+        "idNumber": "2222222222",
+        "hireDate": "Jan 1, 2023, 12:00:00 AM",
+        "basicSalary": 460.0,
+        "overtimeHours": 0.0,
+        "absentDays": 0.0,
+        "bonuses": 0.0,
+        "iessLoans": 0.0,
+        "companyLoans": 0.0,
+        "fines": 0.0,
+        "bringOwnFood": true
+      },
+      "startMonthDate": "Jun 1, 2024, 12:00:00 AM",
+      "endMonthDate": "Jun 30, 2024, 11:59:59 PM",
+      "income": {
+        "basicSalary": 460.0,
+        "overtimeHours": {
+          "quantity": 0.0,
+          "value": -690.0
+        },
+        "bonuses": 0.0,
+        "totalIncome": -230.0
+      },
+      "expenses": {
+        "iessContribution": -25.356050999999997,
+        "biweeklyAdvance": 230.0,
+        "iessLoans": 0.0,
+        "companyLoans": 0.0,
+        "fines": 0.0,
+        "foodDeduction": 0.0,
+        "totalExpenses": 204.643949
+      },
+      "totalIncome": -230.0,
+      "totalExpenses": 204.643949,
+      "totalToPay": 186.99
+    },
+    {
+      "employee": {
+        "name": "Oscar",
+        "lastName": "Perez",
+        "idNumber": "3333333333",
+        "hireDate": "Mar 12, 2022, 12:00:00 AM",
+        "basicSalary": 460.0,
+        "overtimeHours": 0.0,
+        "absentDays": 0.0,
+        "bonuses": 0.0,
+        "iessLoans": 0.0,
+        "companyLoans": 0.0,
+        "fines": 0.0,
+        "bringOwnFood": true
+      },
+      "startMonthDate": "Jun 1, 2024, 12:00:00 AM",
+      "endMonthDate": "Jun 30, 2024, 11:59:59 PM",
+      "income": {
+        "basicSalary": 460.0,
+        "overtimeHours": {
+          "quantity": 0.0,
+          "value": -690.0
+        },
+        "bonuses": 0.0,
+        "totalIncome": -230.0
+      },
+      "expenses": {
+        "iessContribution": -25.356050999999997,
+        "biweeklyAdvance": 230.0,
+        "iessLoans": 0.0,
+        "companyLoans": 0.0,
+        "fines": 0.0,
+        "foodDeduction": 0.0,
+        "totalExpenses": 204.643949
+      },
+      "totalIncome": -230.0,
+      "totalExpenses": 204.643949,
+      "totalToPay": 186.99
+    },
+    {
+      "employee": {
+        "name": "oscar",
+        "lastName": "sisalema",
+        "idNumber": "1753961968",
+        "hireDate": "Dec 2, 2002, 12:00:00 AM",
+        "basicSalary": 460.0,
+        "overtimeHours": 0.0,
+        "absentDays": 2.0,
+        "bonuses": 0.0,
+        "iessLoans": 2.0,
+        "companyLoans": 0.0,
+        "fines": 1.0,
+        "bringOwnFood": false
+      },
+      "startMonthDate": "Jun 1, 2024, 12:00:00 AM",
+      "endMonthDate": "Jun 30, 2024, 11:59:59 PM",
+      "income": {
+        "basicSalary": 460.0,
+        "overtimeHours": {
+          "quantity": 0.0,
+          "value": -690.0
+        },
+        "bonuses": 0.0,
+        "totalIncome": -230.0
+      },
+      "expenses": {
+        "iessContribution": -25.356050999999997,
+        "biweeklyAdvance": 230.0,
+        "iessLoans": 2.0,
+        "companyLoans": 0.0,
+        "fines": 1.0,
+        "foodDeduction": 0.0,
+        "totalExpenses": 207.643949
+      },
+      "totalIncome": -230.0,
+      "totalExpenses": 207.643949,
+      "totalToPay": 158.99
+    }
+  ],
+  "generalPayrolls": [
+    {
+      "name": "Pedro",
+      "lastName": "asto",
+      "hoursWorked": 0.0,
+      "daysWorked": 0.0,
+      "salary": 460.0,
+      "reserveFunds": 0.0,
+      "bonuses": 0.0,
+      "overtimeHours": 0.0,
+      "overtimePayment": 0.0,
+      "nightShiftSurcharge": 0.0,
+      "totalIncome": 0.0,
+      "iessContribution": 0.0,
+      "iessLoans": 0.0,
+      "fines": 0.0,
+      "biweeklyAdvance": 0.0,
+      "foodDeduction": 0.0,
+      "salaryAdvances": 0.0,
+      "totalExpenses": 0.0,
+      "netPayment": 0.0,
+      "employerContribution": 0.0,
+      "totalEmployeeCost": 0.0
+    },
+    {
+      "name": "Oscar",
+      "lastName": "Perez",
+      "hoursWorked": 0.0,
+      "daysWorked": 0.0,
+      "salary": 460.0,
+      "reserveFunds": 0.0,
+      "bonuses": 0.0,
+      "overtimeHours": 0.0,
+      "overtimePayment": 0.0,
+      "nightShiftSurcharge": 0.0,
+      "totalIncome": 0.0,
+      "iessContribution": 0.0,
+      "iessLoans": 0.0,
+      "fines": 0.0,
+      "biweeklyAdvance": 0.0,
+      "foodDeduction": 0.0,
+      "salaryAdvances": 0.0,
+      "totalExpenses": 0.0,
+      "netPayment": 0.0,
+      "employerContribution": 0.0,
+      "totalEmployeeCost": 0.0
+    },
+    {
+      "name": "oscar",
+      "lastName": "sisalema",
+      "hoursWorked": 0.0,
+      "daysWorked": 0.0,
+      "salary": 460.0,
+      "reserveFunds": 0.0,
+      "bonuses": 0.0,
+      "overtimeHours": 0.0,
+      "overtimePayment": 0.0,
+      "nightShiftSurcharge": 0.0,
+      "totalIncome": 0.0,
+      "iessContribution": 0.0,
+      "iessLoans": 0.0,
+      "fines": 0.0,
+      "biweeklyAdvance": 0.0,
+      "foodDeduction": 0.0,
+      "salaryAdvances": 0.0,
+      "totalExpenses": 0.0,
+      "netPayment": 0.0,
+      "employerContribution": 0.0,
+      "totalEmployeeCost": 0.0
+    }
+  ]
+}
