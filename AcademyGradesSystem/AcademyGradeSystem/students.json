@@ -55,5 +55,23 @@
     "grades": [
       20.0
     ]
+  },
+  {
+    "id": "5",
+    "name": "David Jorge Suarez Acames",
+    "age": 27,
+    "major": "biology",
+    "gpa": 10.0,
+    "grades": [
+      10.0
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Federico Alberto Aquiles Castro",
+    "age": 21,
+    "major": "engineering",
+    "gpa": 0.0,
+    "grades": []
   }
 ]
