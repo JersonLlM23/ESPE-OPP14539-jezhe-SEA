@@ -11,51 +11,71 @@ package ec.edu.espe.academygradessystem.model;
 import com.google.gson.annotations.Expose;
 
 public class Grade {
-    @Expose
-    private String studentId;
-    @Expose
-    private String subjectCode;
-    @Expose
-    private double grade;
+    private Task task;
+    private IndividualActivity individualActivity;
+    private GroupActivity groupActivity;
+    private Lesson lesson;
+    private QuimestralExam quimestralExam;
 
-    public Grade(String studentId, String subjectCode, double grade) {
-        this.studentId = studentId;
-        this.subjectCode = subjectCode;
-        this.grade = grade;
+    public Grade(Task task, IndividualActivity individualActivity, GroupActivity groupActivity, Lesson lesson, QuimestralExam quimestralExam) {
+        this.task = task;
+        this.individualActivity = individualActivity;
+        this.groupActivity = groupActivity;
+        this.lesson = lesson;
+        this.quimestralExam = quimestralExam;
+    }
+
+    public double calculateFinalGrade() {
+        return (task.getGrade() + individualActivity.getGrade() + groupActivity.getGrade() + lesson.getGrade() + quimestralExam.getGrade()) / 5;
     }
 
     // Getters and setters
 
-    public String getStudentId() {
-        return studentId;
+    public Task getTask() {
+        return task;
     }
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
+    public IndividualActivity getIndividualActivity() {
+        return individualActivity;
     }
 
-    public String getSubjectCode() {
-        return subjectCode;
+    public GroupActivity getGroupActivity() {
+        return groupActivity;
     }
 
-    public void setSubjectCode(String subjectCode) {
-        this.subjectCode = subjectCode;
+    public void setTask(Task task) {
+        this.task = task;
     }
 
-    public double getGrade() {
-        return grade;
+    public void setIndividualActivity(IndividualActivity individualActivity) {
+        this.individualActivity = individualActivity;
     }
 
-    public void setGrade(double grade) {
-        this.grade = grade;
+    public void setGroupActivity(GroupActivity groupActivity) {
+        this.groupActivity = groupActivity;
+    }
+
+    public void setLesson(Lesson lesson) {
+        this.lesson = lesson;
+    }
+
+    public void setQuimestralExam(QuimestralExam quimestralExam) {
+        this.quimestralExam = quimestralExam;
+    }
+
+    public Lesson getLesson() {
+        return lesson;
+    }
+
+    public QuimestralExam getQuimestralExam() {
+        return quimestralExam;
     }
 
     @Override
     public String toString() {
-        return "Grade{" + "studentId=" + studentId + ", subjectCode=" + subjectCode + ", grade=" + grade + '}';
+        return "Grade{" + "task=" + task + ", individualActivity=" + individualActivity + ", groupActivity=" + groupActivity + ", lesson=" + lesson + ", quimestralExam=" + quimestralExam + '}';
     }
-    
-    
+
     
 }
 
