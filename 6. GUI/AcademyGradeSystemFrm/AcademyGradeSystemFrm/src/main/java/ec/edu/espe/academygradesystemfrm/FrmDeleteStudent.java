@@ -4,6 +4,10 @@
  */
 package ec.edu.espe.academygradesystemfrm;
 
+import ec.edu.espe.academygradesystemfrm.controller.DeleteStudent;
+import ec.edu.espe.academygradesystemfrm.utils.DeleteStudentToMongo;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author WINDOWS
@@ -59,6 +63,11 @@ public class FrmDeleteStudent extends javax.swing.JFrame {
         lblDeleteId.setText("Id del estudiante a eliminar:");
 
         btnAccept.setText("Aceptar");
+        btnAccept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAcceptActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -144,6 +153,17 @@ public class FrmDeleteStudent extends javax.swing.JFrame {
         frmAcademyGradeRegister.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAcademyGradeRegisterActionPerformed
+
+    private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
+        int deleteId;
+        deleteId = Integer.parseInt(txtDeleteId.getText());
+        DeleteStudent delete = new DeleteStudent();
+        delete.deleteStudent(deleteId);
+        JOptionPane.showMessageDialog(this,"estudiante eliminado exitosamente");
+        
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAcceptActionPerformed
 
     /**
      * @param args the command line arguments

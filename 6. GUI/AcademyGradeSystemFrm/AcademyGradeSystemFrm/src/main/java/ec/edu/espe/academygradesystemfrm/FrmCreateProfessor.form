@@ -92,12 +92,17 @@
                       <Component id="lblDepartment" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="26" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="txtIdProfessor" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtFullNameProfessor" min="-2" pref="114" max="-2" attributes="0"/>
-                      <Component id="txtDeparment" min="-2" pref="114" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="txtFullNameProfessor" pref="114" max="32767" attributes="0"/>
+                      <Component id="txtDeparment" pref="114" max="32767" attributes="0"/>
+                      <Component id="txtIdProfessor" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
+                  <Component id="btnAccept" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -119,7 +124,9 @@
                       <Component id="lblDepartment" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtDeparment" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="0" pref="74" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btnAccept" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="33" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -145,6 +152,14 @@
         <Component class="javax.swing.JTextField" name="txtFullNameProfessor">
         </Component>
         <Component class="javax.swing.JTextField" name="txtDeparment">
+        </Component>
+        <Component class="javax.swing.JButton" name="btnAccept">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Aceptar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAcceptActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
