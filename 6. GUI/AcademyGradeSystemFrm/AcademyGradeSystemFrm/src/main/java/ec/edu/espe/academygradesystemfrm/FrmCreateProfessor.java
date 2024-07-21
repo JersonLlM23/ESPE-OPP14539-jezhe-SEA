@@ -4,6 +4,10 @@
  */
 package ec.edu.espe.academygradesystemfrm;
 
+import ec.edu.espe.academygradesystemfrm.controller.CreateProfessorController;
+import ec.edu.espe.academygradesystemfrm.model.CreateProfessor;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author WINDOWS
@@ -172,7 +176,15 @@ public class FrmCreateProfessor extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAcademyGradeRegisterActionPerformed
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
+        int id = Integer.parseInt(txtIdProfessor.getText());
+        String name = txtFullNameProfessor.getText();
+        String deparment = txtDeparment.getText();
         
+        CreateProfessor professor = new CreateProfessor(id, name, deparment);
+        CreateProfessorController controller = new CreateProfessorController();
+        controller.insertProfessor(professor);
+        
+        JOptionPane.showMessageDialog(this, "professor registrado exitosamente");
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAcceptActionPerformed
 
