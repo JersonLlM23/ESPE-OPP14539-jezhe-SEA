@@ -88,6 +88,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="UpdateProfessor"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmUpdateProfessorActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itmDeleteProfessor">
               <Properties>

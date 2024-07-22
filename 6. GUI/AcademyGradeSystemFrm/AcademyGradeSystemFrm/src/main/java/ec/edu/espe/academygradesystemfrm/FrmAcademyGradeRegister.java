@@ -123,6 +123,11 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         mnuProfessor.add(itmReadProfessor);
 
         itmUpdateProfessor.setText("UpdateProfessor");
+        itmUpdateProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmUpdateProfessorActionPerformed(evt);
+            }
+        });
         mnuProfessor.add(itmUpdateProfessor);
 
         itmDeleteProfessor.setText("DeleteProfessor");
@@ -249,6 +254,13 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         frmDeleteProfessor.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_itmDeleteProfessorActionPerformed
+
+    private void itmUpdateProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmUpdateProfessorActionPerformed
+        FrmUpdateProfessor frmUpdateProfessor = new FrmUpdateProfessor();
+        this.setVisible(false);
+        frmUpdateProfessor.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmUpdateProfessorActionPerformed
 
     /**
      * @param args the command line arguments

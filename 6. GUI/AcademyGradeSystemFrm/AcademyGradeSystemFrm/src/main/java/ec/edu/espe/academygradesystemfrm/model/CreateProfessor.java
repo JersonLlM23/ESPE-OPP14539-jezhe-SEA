@@ -51,7 +51,7 @@ public class CreateProfessor {
     }
     
     public Document toDocument(){
-        return new Document("id", id).append("name", name).append("deparment", deparment);
+        return new Document("id", id).append("Nombre", name).append("Departamento", deparment);
     }
     
 }

@@ -4,10 +4,27 @@
  */
 package ec.edu.espe.academygradesystemfrm.utils;
 
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoDatabase;
+
 /**
  *
  * @author WINDOWS
  */
 public class UpdateProfessorToMongo {
+    private MongoClient mongoClient;
+    private MongoDatabase database;
     
+    public UpdateProfessorToMongo(){
+        mongoClient = MongoClients.create("mongodb+srv://ricardoandreslainezsuarez:ricardo_1422@ricardolainez.yyg9cp1.mongodb.net/");
+        database = mongoClient.getDatabase("AcademyGradeRegister");
+        
+    }
+    public MongoDatabase getDatabase(){
+        return database;
+    }
+    public void close(){
+        mongoClient.close();
+    }
 }
