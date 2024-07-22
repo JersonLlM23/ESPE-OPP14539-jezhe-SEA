@@ -4,7 +4,7 @@
  */
 package ec.edu.espe.academygradesystemfrm;
 
-import ec.edu.espe.academygradesystemfrm.controller.DeleteStudent;
+import ec.edu.espe.academygradesystemfrm.controller.DeleteStudentController;
 import ec.edu.espe.academygradesystemfrm.utils.DeleteStudentToMongo;
 import javax.swing.JOptionPane;
 
@@ -157,7 +157,7 @@ public class FrmDeleteStudent extends javax.swing.JFrame {
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
         int deleteId;
         deleteId = Integer.parseInt(txtDeleteId.getText());
-        DeleteStudent delete = new DeleteStudent();
+        DeleteStudentController delete = new DeleteStudentController();
         delete.deleteStudent(deleteId);
         JOptionPane.showMessageDialog(this,"estudiante eliminado exitosamente");
         

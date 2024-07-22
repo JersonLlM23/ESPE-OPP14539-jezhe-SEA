@@ -126,6 +126,11 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         mnuProfessor.add(itmUpdateProfessor);
 
         itmDeleteProfessor.setText("DeleteProfessor");
+        itmDeleteProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmDeleteProfessorActionPerformed(evt);
+            }
+        });
         mnuProfessor.add(itmDeleteProfessor);
 
         jMenuBar1.add(mnuProfessor);
@@ -237,6 +242,13 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         frmAbout.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void itmDeleteProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmDeleteProfessorActionPerformed
+        FrmDeleteProfessor frmDeleteProfessor = new FrmDeleteProfessor();
+        this.setVisible(false);
+        frmDeleteProfessor.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmDeleteProfessorActionPerformed
 
     /**
      * @param args the command line arguments
