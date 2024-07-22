@@ -1,0 +1,77 @@
+[
+  {
+    "id": "1",
+    "name": "Ricardo Andres Lainez Suarez",
+    "age": 19,
+    "major": "Matematica",
+    "gpa": 9.5,
+    "grades": [
+      9.0,
+      10.0
+    ]
+  },
+  {
+    "id": "3",
+    "name": "David Stalin Lainez Suarez",
+    "age": 17,
+    "major": "engineering",
+    "gpa": 0.0,
+    "grades": []
+  },
+  {
+    "id": "4",
+    "name": "Adrian Padilla",
+    "age": 20,
+    "major": "engineering",
+    "gpa": 8.0,
+    "grades": [
+      8.0
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Pablo Pedro Picasso Piedra",
+    "age": 19,
+    "major": "engineering",
+    "gpa": 0.0,
+    "grades": []
+  },
+  {
+    "id": "2100935727",
+    "name": "Jerson",
+    "age": 20,
+    "major": "Engineering",
+    "gpa": 20.0,
+    "grades": [
+      20.0
+    ]
+  },
+  {
+    "id": "1902",
+    "name": "bibi",
+    "age": 15,
+    "major": "engineering",
+    "gpa": 20.0,
+    "grades": [
+      20.0
+    ]
+  },
+  {
+    "id": "5",
+    "name": "David Jorge Suarez Acames",
+    "age": 27,
+    "major": "biology",
+    "gpa": 10.0,
+    "grades": [
+      10.0
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Federico Alberto Aquiles Castro",
+    "age": 21,
+    "major": "engineering",
+    "gpa": 0.0,
+    "grades": []
+  }
+]
