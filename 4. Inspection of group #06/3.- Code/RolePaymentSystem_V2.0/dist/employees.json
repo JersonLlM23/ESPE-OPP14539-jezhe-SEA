@@ -1,0 +1,16 @@
+[
+  {
+    "name": "osacar",
+    "lastName": "sisalema",
+    "idNumber": "32121313",
+    "hireDate": "Dec 2, 2002, 12:00:00 AM",
+    "basicSalary": 460.0,
+    "overtimeHours": 0.0,
+    "absentDays": 0.0,
+    "bonuses": 3234.0,
+    "iessLoans": 123.0,
+    "companyLoans": 32.0,
+    "fines": 23.0,
+    "bringOwnFood": false
+  }
+]
