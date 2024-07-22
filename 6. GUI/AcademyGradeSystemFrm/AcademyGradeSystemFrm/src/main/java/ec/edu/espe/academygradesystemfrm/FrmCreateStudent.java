@@ -209,7 +209,7 @@ public class FrmCreateStudent extends javax.swing.JFrame {
             
             StudentToMongo.uploadSudentData(student);
             
-            JOptionPane.showConfirmDialog(this, "Estudiante registrado corrctamente");
+            JOptionPane.showConfirmDialog(this, "Estudiante registrado correctamente");
             
             
         }catch(Exception e){

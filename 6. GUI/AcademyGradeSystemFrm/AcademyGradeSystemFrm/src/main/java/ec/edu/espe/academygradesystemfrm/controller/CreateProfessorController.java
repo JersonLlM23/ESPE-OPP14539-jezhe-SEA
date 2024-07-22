@@ -4,6 +4,7 @@
  */
 package ec.edu.espe.academygradesystemfrm.controller;
 
+import com.mongodb.MongoException;
 import com.mongodb.client.MongoCollection;
 import ec.edu.espe.academygradesystemfrm.model.CreateProfessor;
 import ec.edu.espe.academygradesystemfrm.utils.ProfessorToMongo;
@@ -22,7 +23,12 @@ public class CreateProfessorController {
     
     public void insertProfessor(CreateProfessor professor){
         MongoCollection<Document> collection = mongoDBConnection.getCollection("professors");
-        collection.insertOne(professor.toDocument());
-        mongoDBConnection.closeConnection();
+        try{
+            collection.insertOne(professor.toDocument());
+            mongoDBConnection.closeConnection();
+        }catch(MongoException e){
+            e.printStackTrace();
+        }
+        
     }
 }
