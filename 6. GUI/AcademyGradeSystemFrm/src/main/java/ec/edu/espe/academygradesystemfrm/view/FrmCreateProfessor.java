@@ -2,22 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package ec.edu.espe.academygradesystemfrm;
+package ec.edu.espe.academygradesystemfrm.view;
 
-import ec.edu.espe.academygradesystemfrm.controller.UpdateStudentController;
-import ec.edu.espe.academygradesystemfrm.utils.UpdateStudentToMongo;
+import ec.edu.espe.academygradesystemfrm.controller.CreateProfessorController;
+import ec.edu.espe.academygradesystemfrm.model.CreateProfessor;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author WINDOWS
  */
-public class FrmUpdateStudent extends javax.swing.JFrame {
+public class FrmCreateProfessor extends javax.swing.JFrame {
 
     /**
-     * Creates new form FrmUpdateStudent
+     * Creates new form FrmCreateProfessor
      */
-    public FrmUpdateStudent() {
+    public FrmCreateProfessor() {
         initComponents();
     }
 
@@ -33,46 +33,42 @@ public class FrmUpdateStudent extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        lblId = new javax.swing.JLabel();
-        txtId = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        txtNewFullName = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        txtNewAge = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        txtNewDegree = new javax.swing.JTextField();
+        lblIdProfessor = new javax.swing.JLabel();
+        txtIdProfessor = new javax.swing.JTextField();
+        lblFullNameProfessor = new javax.swing.JLabel();
+        lblDepartment = new javax.swing.JLabel();
+        txtFullNameProfessor = new javax.swing.JTextField();
+        txtDeparment = new javax.swing.JTextField();
         btnAccept = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         btnAcademyGradeRegister = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("ACTUALIZAR DATOS DEL ESTUDIANTE");
+        jLabel1.setText("CREAR PROFESOR");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(90, 90, 90)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(142, 142, 142))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        lblId.setText("Id del estudiante a cambiar datos:");
+        lblIdProfessor.setText("ID profesor:");
 
-        jLabel2.setText("nuevo nombre:");
+        lblFullNameProfessor.setText("Nombre Completo:");
 
-        jLabel3.setText("new age:");
-
-        jLabel4.setText("nuevo grado:");
+        lblDepartment.setText("Departamento:");
 
         btnAccept.setText("Aceptar");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
@@ -86,57 +82,40 @@ public class FrmUpdateStudent extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
+                .addGap(54, 54, 54)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblFullNameProfessor)
+                    .addComponent(lblIdProfessor)
+                    .addComponent(lblDepartment))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lblId)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtId))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(23, 23, 23)
-                                .addComponent(jLabel3))
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(26, 26, 26)
-                                .addComponent(txtNewFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtNewDegree, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtNewAge, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(0, 97, Short.MAX_VALUE))
+                    .addComponent(txtFullNameProfessor, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+                    .addComponent(txtDeparment, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+                    .addComponent(txtIdProfessor))
+                .addGap(93, 93, 93))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(149, 149, 149)
+                .addGap(158, 158, 158)
                 .addComponent(btnAccept)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(22, 22, 22)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblId)
-                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(lblIdProfessor)
+                    .addComponent(txtIdProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblFullNameProfessor)
+                    .addComponent(txtFullNameProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtNewFullName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtNewDegree, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(txtNewAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21)
-                        .addComponent(btnAccept))
-                    .addComponent(jLabel3))
-                .addContainerGap(46, Short.MAX_VALUE))
+                    .addComponent(lblDepartment)
+                    .addComponent(txtDeparment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnAccept)
+                .addGap(0, 33, Short.MAX_VALUE))
         );
 
         btnAcademyGradeRegister.setText("Academy Grade Register");
@@ -153,26 +132,25 @@ public class FrmUpdateStudent extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnAcademyGradeRegister)
-                .addGap(56, 56, 56))
+                .addGap(44, 44, 44))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(btnAcademyGradeRegister)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addGap(0, 18, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -180,7 +158,7 @@ public class FrmUpdateStudent extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -191,27 +169,22 @@ public class FrmUpdateStudent extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAcademyGradeRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcademyGradeRegisterActionPerformed
-        FrmAcademyGradeRegister frmAcademyGradeRegiser = new FrmAcademyGradeRegister();
+        FrmAcademyGradeRegister frmAcademyGradeRegister = new FrmAcademyGradeRegister();
         this.setVisible(false);
-        frmAcademyGradeRegiser.setVisible(true);
+        frmAcademyGradeRegister.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAcademyGradeRegisterActionPerformed
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
-        int id = Integer.parseInt(txtId.getText());
-        String name = txtNewFullName.getText();
-        String degree = txtNewDegree.getText();
-        String age = txtNewAge.getText();
+        int id = Integer.parseInt(txtIdProfessor.getText());
+        String name = txtFullNameProfessor.getText();
+        String deparment = txtDeparment.getText();
         
-        UpdateStudentToMongo connection = new UpdateStudentToMongo();
-        UpdateStudentController updater = new UpdateStudentController(connection);
-        updater.updataStudentId(id, name, degree, age);
+        CreateProfessor professor = new CreateProfessor(id, name, deparment);
+        CreateProfessorController controller = new CreateProfessorController();
+        controller.insertProfessor(professor);
         
-        connection.close();
-        
-        JOptionPane.showMessageDialog(this, "estudiante actualizado correctamente");
-        
-        
+        JOptionPane.showMessageDialog(this, "profesor registrado exitosamente");
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAcceptActionPerformed
 
@@ -232,20 +205,20 @@ public class FrmUpdateStudent extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmUpdateStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCreateProfessor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmUpdateStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCreateProfessor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmUpdateStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCreateProfessor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmUpdateStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCreateProfessor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmUpdateStudent().setVisible(true);
+                new FrmCreateProfessor().setVisible(true);
             }
         });
     }
@@ -254,16 +227,14 @@ public class FrmUpdateStudent extends javax.swing.JFrame {
     private javax.swing.JButton btnAcademyGradeRegister;
     private javax.swing.JButton btnAccept;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel lblId;
-    private javax.swing.JTextField txtId;
-    private javax.swing.JTextField txtNewAge;
-    private javax.swing.JTextField txtNewDegree;
-    private javax.swing.JTextField txtNewFullName;
+    private javax.swing.JLabel lblDepartment;
+    private javax.swing.JLabel lblFullNameProfessor;
+    private javax.swing.JLabel lblIdProfessor;
+    private javax.swing.JTextField txtDeparment;
+    private javax.swing.JTextField txtFullNameProfessor;
+    private javax.swing.JTextField txtIdProfessor;
     // End of variables declaration//GEN-END:variables
 }

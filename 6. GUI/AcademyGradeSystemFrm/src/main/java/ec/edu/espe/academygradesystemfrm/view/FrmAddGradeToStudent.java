@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package ec.edu.espe.academygradesystemfrm;
+package ec.edu.espe.academygradesystemfrm.view;
 
 /**
  *
  * @author WINDOWS
  */
-public class FrmReadStudentGrade extends javax.swing.JFrame {
+public class FrmAddGradeToStudent extends javax.swing.JFrame {
 
     /**
-     * Creates new form ReadStudentGrade
+     * Creates new form FrmAddGradeToStudent
      */
-    public FrmReadStudentGrade() {
+    public FrmAddGradeToStudent() {
         initComponents();
     }
 
@@ -59,21 +59,20 @@ public class FrmReadStudentGrade extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmReadStudentGrade.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAddGradeToStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmReadStudentGrade.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAddGradeToStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmReadStudentGrade.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAddGradeToStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmReadStudentGrade.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAddGradeToStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmReadStudentGrade().setVisible(true);
+                new FrmAddGradeToStudent().setVisible(true);
             }
         });
     }

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package ec.edu.espe.academygradesystemfrm;
+package ec.edu.espe.academygradesystemfrm.view;
 
 import ec.edu.espe.academygradesystemfrm.model.CreateStudent;
 import ec.edu.espe.academygradesystemfrm.utils.StudentToMongo;

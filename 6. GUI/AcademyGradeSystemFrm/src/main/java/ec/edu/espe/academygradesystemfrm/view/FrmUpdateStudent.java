@@ -2,22 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package ec.edu.espe.academygradesystemfrm;
+package ec.edu.espe.academygradesystemfrm.view;
 
-import ec.edu.espe.academygradesystemfrm.controller.DeleteStudentController;
-import ec.edu.espe.academygradesystemfrm.utils.DeleteStudentToMongo;
+import ec.edu.espe.academygradesystemfrm.controller.UpdateStudentController;
+import ec.edu.espe.academygradesystemfrm.utils.UpdateStudentToMongo;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author WINDOWS
  */
-public class FrmDeleteStudent extends javax.swing.JFrame {
+public class FrmUpdateStudent extends javax.swing.JFrame {
 
     /**
-     * Creates new form FrmDeleteStudent
+     * Creates new form FrmUpdateStudent
      */
-    public FrmDeleteStudent() {
+    public FrmUpdateStudent() {
         initComponents();
     }
 
@@ -33,22 +33,28 @@ public class FrmDeleteStudent extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        lblDeleteId = new javax.swing.JLabel();
-        txtDeleteId = new javax.swing.JTextField();
+        lblId = new javax.swing.JLabel();
+        txtId = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtNewFullName = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txtNewAge = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtNewDegree = new javax.swing.JTextField();
         btnAccept = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         btnAcademyGradeRegister = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("ELIMINAR ESTUDIANTE");
+        jLabel1.setText("ACTUALIZAR DATOS DEL ESTUDIANTE");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(134, 134, 134)
+                .addGap(90, 90, 90)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -57,10 +63,16 @@ public class FrmDeleteStudent extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
-        lblDeleteId.setText("Id del estudiante a eliminar:");
+        lblId.setText("Id del estudiante a cambiar datos:");
+
+        jLabel2.setText("nuevo nombre:");
+
+        jLabel3.setText("new age:");
+
+        jLabel4.setText("nuevo grado:");
 
         btnAccept.setText("Aceptar");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
@@ -74,27 +86,57 @@ public class FrmDeleteStudent extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(29, 29, 29)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addComponent(lblDeleteId)
+                        .addComponent(lblId)
                         .addGap(18, 18, 18)
-                        .addComponent(txtDeleteId, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtId))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(156, 156, 156)
-                        .addComponent(btnAccept)))
-                .addContainerGap(61, Short.MAX_VALUE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(jLabel3))
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addComponent(txtNewFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtNewDegree, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtNewAge, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addGap(0, 97, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(149, 149, 149)
+                .addComponent(btnAccept)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDeleteId)
-                    .addComponent(txtDeleteId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addComponent(btnAccept)
-                .addContainerGap(109, Short.MAX_VALUE))
+                    .addComponent(lblId)
+                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtNewFullName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtNewDegree, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(txtNewAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21)
+                        .addComponent(btnAccept))
+                    .addComponent(jLabel3))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         btnAcademyGradeRegister.setText("Academy Grade Register");
@@ -111,13 +153,14 @@ public class FrmDeleteStudent extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnAcademyGradeRegister)
-                .addGap(47, 47, 47))
+                .addGap(56, 56, 56))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(btnAcademyGradeRegister)
-                .addGap(0, 17, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -127,9 +170,9 @@ public class FrmDeleteStudent extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -140,26 +183,33 @@ public class FrmDeleteStudent extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAcademyGradeRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcademyGradeRegisterActionPerformed
-        FrmAcademyGradeRegister frmAcademyGradeRegister = new FrmAcademyGradeRegister();
+        FrmAcademyGradeRegister frmAcademyGradeRegiser = new FrmAcademyGradeRegister();
         this.setVisible(false);
-        frmAcademyGradeRegister.setVisible(true);
+        frmAcademyGradeRegiser.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAcademyGradeRegisterActionPerformed
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
-        int deleteId;
-        deleteId = Integer.parseInt(txtDeleteId.getText());
-        DeleteStudentController delete = new DeleteStudentController();
-        delete.deleteStudent(deleteId);
-        JOptionPane.showMessageDialog(this,"estudiante eliminado exitosamente");
+        int id = Integer.parseInt(txtId.getText());
+        String name = txtNewFullName.getText();
+        String degree = txtNewDegree.getText();
+        String age = txtNewAge.getText();
+        
+        UpdateStudentToMongo connection = new UpdateStudentToMongo();
+        UpdateStudentController updater = new UpdateStudentController(connection);
+        updater.updataStudentId(id, name, degree, age);
+        
+        connection.close();
+        
+        JOptionPane.showMessageDialog(this, "estudiante actualizado correctamente");
         
         
         // TODO add your handling code here:
@@ -182,20 +232,20 @@ public class FrmDeleteStudent extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmDeleteStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmUpdateStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmDeleteStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmUpdateStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmDeleteStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmUpdateStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmDeleteStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmUpdateStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmDeleteStudent().setVisible(true);
+                new FrmUpdateStudent().setVisible(true);
             }
         });
     }
@@ -204,10 +254,16 @@ public class FrmDeleteStudent extends javax.swing.JFrame {
     private javax.swing.JButton btnAcademyGradeRegister;
     private javax.swing.JButton btnAccept;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel lblDeleteId;
-    private javax.swing.JTextField txtDeleteId;
+    private javax.swing.JLabel lblId;
+    private javax.swing.JTextField txtId;
+    private javax.swing.JTextField txtNewAge;
+    private javax.swing.JTextField txtNewDegree;
+    private javax.swing.JTextField txtNewFullName;
     // End of variables declaration//GEN-END:variables
 }
