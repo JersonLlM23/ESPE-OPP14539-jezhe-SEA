@@ -45,7 +45,7 @@ public class FrmReadProfessor extends javax.swing.JFrame {
             .addGap(0, 251, Short.MAX_VALUE)
         );
 
-        btnAcademyGradeRegister.setText("Academy Grade Register");
+        btnAcademyGradeRegister.setText("Regresar al menú");
         btnAcademyGradeRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAcademyGradeRegisterActionPerformed(evt);
@@ -64,8 +64,9 @@ public class FrmReadProfessor extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(btnAcademyGradeRegister)
-                .addGap(0, 18, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(btnAcademyGradeRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

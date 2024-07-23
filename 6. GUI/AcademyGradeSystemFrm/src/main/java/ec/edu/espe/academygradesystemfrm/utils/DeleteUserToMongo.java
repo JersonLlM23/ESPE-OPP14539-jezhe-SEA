@@ -12,23 +12,20 @@ import org.bson.Document;
 
 /**
  *
- * @author WINDOWS
+ * @author Jerson Llumiquinga M. - TEAM: JEZHEA S.E.A
  */
-public class DeleteProfessorToMongo {
+public class DeleteUserToMongo {
     private MongoDatabase database;
     private MongoClient mongoClient;
     
-    public DeleteProfessorToMongo(){
+    public DeleteUserToMongo(){
         mongoClient = MongoClients.create("mongodb+srv://jezhe:jezheoop@cluster0.6vuzzwl.mongodb.net/");
-        database = mongoClient.getDatabase("AcademyGradeRegister");
-        
+        database = mongoClient.getDatabase("AcademyGradeRegister");      
     }
-    
     public MongoCollection<Document> getCollection(String collectionName){
         return database.getCollection(collectionName);
     }
-    
     public void closeConnection(){
         mongoClient.close();
-    }
+    }   
 }

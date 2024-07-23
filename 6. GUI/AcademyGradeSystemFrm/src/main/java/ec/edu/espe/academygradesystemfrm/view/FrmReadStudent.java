@@ -87,7 +87,7 @@ public class FrmReadStudent extends javax.swing.JFrame {
                 .addContainerGap(120, Short.MAX_VALUE))
         );
 
-        btnAcademyGradeRegister.setText("Academy Grade Register");
+        btnAcademyGradeRegister.setText("Regresar al menú");
         btnAcademyGradeRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAcademyGradeRegisterActionPerformed(evt);

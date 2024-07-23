@@ -5,6 +5,7 @@
 package ec.edu.espe.academygradesystemfrm.view;
 
 import ec.edu.espe.academygradesystemfrm.controller.DeleteProfessorController;
+import ec.edu.espe.academygradesystemfrm.utils.DeleteProfessorToMongo;
 import javax.swing.JOptionPane;
 
 /**
@@ -34,7 +35,7 @@ public class FrmDeleteProfessor extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         lblDeleteProfessor = new javax.swing.JLabel();
         txtDeleteId = new javax.swing.JTextField();
-        btmAccept = new javax.swing.JButton();
+        btnAccept = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         btnAcademyGradeSystem = new javax.swing.JButton();
 
@@ -67,10 +68,10 @@ public class FrmDeleteProfessor extends javax.swing.JFrame {
             }
         });
 
-        btmAccept.setText("Aceptar");
-        btmAccept.addActionListener(new java.awt.event.ActionListener() {
+        btnAccept.setText("Aceptar");
+        btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btmAcceptActionPerformed(evt);
+                btnAcceptActionPerformed(evt);
             }
         });
 
@@ -87,7 +88,7 @@ public class FrmDeleteProfessor extends javax.swing.JFrame {
                         .addComponent(txtDeleteId, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(155, 155, 155)
-                        .addComponent(btmAccept)))
+                        .addComponent(btnAccept)))
                 .addContainerGap(76, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -98,11 +99,11 @@ public class FrmDeleteProfessor extends javax.swing.JFrame {
                     .addComponent(lblDeleteProfessor)
                     .addComponent(txtDeleteId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
-                .addComponent(btmAccept)
+                .addComponent(btnAccept)
                 .addContainerGap(118, Short.MAX_VALUE))
         );
 
-        btnAcademyGradeSystem.setText("Academy Grade System");
+        btnAcademyGradeSystem.setText("Regresar al menú");
         btnAcademyGradeSystem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAcademyGradeSystemActionPerformed(evt);
@@ -160,14 +161,14 @@ public class FrmDeleteProfessor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAcademyGradeSystemActionPerformed
 
-    private void btmAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmAcceptActionPerformed
+    private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
         int deleteId;
         deleteId = Integer.parseInt(txtDeleteId.getText());
         DeleteProfessorController delete = new DeleteProfessorController();
         delete.deleteProfessor(deleteId);
         JOptionPane.showMessageDialog(this, "El profesor ha sido eliminado exitosamente.");
         // TODO add your handling code here:
-    }//GEN-LAST:event_btmAcceptActionPerformed
+    }//GEN-LAST:event_btnAcceptActionPerformed
 
     private void txtDeleteIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDeleteIdActionPerformed
         // TODO add your handling code here:
@@ -209,8 +210,8 @@ public class FrmDeleteProfessor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btmAccept;
     private javax.swing.JButton btnAcademyGradeSystem;
+    private javax.swing.JButton btnAccept;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

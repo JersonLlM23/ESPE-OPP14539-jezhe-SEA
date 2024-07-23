@@ -28,18 +28,19 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
 
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuAcademyGradeRegister = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
         itmLogout = new javax.swing.JMenuItem();
         itmExit = new javax.swing.JMenuItem();
-        mnuStudent = new javax.swing.JMenu();
-        itmCreateStudent = new javax.swing.JMenuItem();
-        itmReadStudent = new javax.swing.JMenuItem();
-        itmUpdateStudent = new javax.swing.JMenuItem();
-        itmDeleteStudent = new javax.swing.JMenuItem();
         mnuProfessor = new javax.swing.JMenu();
         itmCreateProfessor = new javax.swing.JMenuItem();
         itmReadProfessor = new javax.swing.JMenuItem();
         itmUpdateProfessor = new javax.swing.JMenuItem();
         itmDeleteProfessor = new javax.swing.JMenuItem();
+        mnuStudent = new javax.swing.JMenu();
+        itmCreateStudent = new javax.swing.JMenuItem();
+        itmReadStudent = new javax.swing.JMenuItem();
+        itmUpdateStudent = new javax.swing.JMenuItem();
+        itmDeleteStudent = new javax.swing.JMenuItem();
         mnuGrade = new javax.swing.JMenu();
         itmAddGradeToStudent = new javax.swing.JMenuItem();
         itmReadStudentGrade = new javax.swing.JMenuItem();
@@ -52,13 +53,22 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAutoRequestFocus(false);
 
-        mnuAcademyGradeRegister.setText("Academy Grade register");
+        mnuAcademyGradeRegister.setText("HOME");
 
-        itmLogout.setText("logout");
+        jMenuItem2.setText("Crear Usuario");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        mnuAcademyGradeRegister.add(jMenuItem2);
+
+        itmLogout.setText("Cerrar Sesión");
         mnuAcademyGradeRegister.add(itmLogout);
 
-        itmExit.setText("Exit");
+        itmExit.setText("Salir");
         itmExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 itmExitActionPerformed(evt);
@@ -68,45 +78,9 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
 
         jMenuBar1.add(mnuAcademyGradeRegister);
 
-        mnuStudent.setText("Student");
+        mnuProfessor.setText("PROFESOR");
 
-        itmCreateStudent.setText("CreateStudent");
-        itmCreateStudent.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itmCreateStudentActionPerformed(evt);
-            }
-        });
-        mnuStudent.add(itmCreateStudent);
-
-        itmReadStudent.setText("ReadStudent");
-        itmReadStudent.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itmReadStudentActionPerformed(evt);
-            }
-        });
-        mnuStudent.add(itmReadStudent);
-
-        itmUpdateStudent.setText("UpdateStudent");
-        itmUpdateStudent.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itmUpdateStudentActionPerformed(evt);
-            }
-        });
-        mnuStudent.add(itmUpdateStudent);
-
-        itmDeleteStudent.setText("DeleteStudent");
-        itmDeleteStudent.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itmDeleteStudentActionPerformed(evt);
-            }
-        });
-        mnuStudent.add(itmDeleteStudent);
-
-        jMenuBar1.add(mnuStudent);
-
-        mnuProfessor.setText("Professor");
-
-        itmCreateProfessor.setText("CreateProfessor");
+        itmCreateProfessor.setText("Registrar Profesor");
         itmCreateProfessor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 itmCreateProfessorActionPerformed(evt);
@@ -114,7 +88,7 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         });
         mnuProfessor.add(itmCreateProfessor);
 
-        itmReadProfessor.setText("ReadProfessor");
+        itmReadProfessor.setText("Leer Profesor");
         itmReadProfessor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 itmReadProfessorActionPerformed(evt);
@@ -122,7 +96,8 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         });
         mnuProfessor.add(itmReadProfessor);
 
-        itmUpdateProfessor.setText("UpdateProfessor");
+        itmUpdateProfessor.setText("Actualizar Profesor");
+        itmUpdateProfessor.setToolTipText("");
         itmUpdateProfessor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 itmUpdateProfessorActionPerformed(evt);
@@ -130,7 +105,7 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         });
         mnuProfessor.add(itmUpdateProfessor);
 
-        itmDeleteProfessor.setText("DeleteProfessor");
+        itmDeleteProfessor.setText("Borrar Profesor");
         itmDeleteProfessor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 itmDeleteProfessorActionPerformed(evt);
@@ -140,35 +115,73 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
 
         jMenuBar1.add(mnuProfessor);
 
-        mnuGrade.setText("Grade");
+        mnuStudent.setText("ESTUDIANTE");
 
-        itmAddGradeToStudent.setText("AddGradeToStudent");
+        itmCreateStudent.setText("Registrar Estudiante");
+        itmCreateStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmCreateStudentActionPerformed(evt);
+            }
+        });
+        mnuStudent.add(itmCreateStudent);
+
+        itmReadStudent.setText("Leer Estudiante");
+        itmReadStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmReadStudentActionPerformed(evt);
+            }
+        });
+        mnuStudent.add(itmReadStudent);
+
+        itmUpdateStudent.setText("Actualizar Estudiante");
+        itmUpdateStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmUpdateStudentActionPerformed(evt);
+            }
+        });
+        mnuStudent.add(itmUpdateStudent);
+
+        itmDeleteStudent.setText("Eliminar Estudiante");
+        itmDeleteStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmDeleteStudentActionPerformed(evt);
+            }
+        });
+        mnuStudent.add(itmDeleteStudent);
+
+        jMenuBar1.add(mnuStudent);
+
+        mnuGrade.setText("NOTAS");
+
+        itmAddGradeToStudent.setText("Agregar Notas a Estudiantes");
         mnuGrade.add(itmAddGradeToStudent);
 
-        itmReadStudentGrade.setText("ReadStudentGrade");
+        itmReadStudentGrade.setText("Leer Notas de Estudiantes");
         mnuGrade.add(itmReadStudentGrade);
 
-        itmUpdateStudentGrade.setText("UpdateStudentGrade");
+        itmUpdateStudentGrade.setText("Actualizar Nota");
         mnuGrade.add(itmUpdateStudentGrade);
 
-        itmDeleteStudentGrade.setText("DeleteStudentGrade");
+        itmDeleteStudentGrade.setText("Eliminar Nota");
         mnuGrade.add(itmDeleteStudentGrade);
 
         jMenuBar1.add(mnuGrade);
 
-        mnuReport.setText("Report");
+        mnuReport.setText("REPORTE");
 
-        itmGenerateStudentReport.setText("GenerateStudentReport");
+        itmGenerateStudentReport.setText("Generar Reporte de Notas");
         mnuReport.add(itmGenerateStudentReport);
 
-        itmEvaluateStudent.setText("EvaluateStudent");
+        itmEvaluateStudent.setText("Evaluar Estudiante");
         mnuReport.add(itmEvaluateStudent);
 
         jMenuBar1.add(mnuReport);
 
-        jMenu1.setText("Ayuda");
+        jMenu1.setText("AYUDA");
+        jMenu1.setToolTipText("");
+        jMenu1.setAlignmentX(1.0F);
 
-        jMenuItem1.setText("acerca");
+        jMenuItem1.setText("Acerca de");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -184,11 +197,11 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addGap(0, 480, Short.MAX_VALUE)
         );
 
         pack();
@@ -241,13 +254,6 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_itmReadProfessorActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        FrmAbout frmAbout = new FrmAbout();
-        this.setVisible(false);
-        frmAbout.setVisible(true);
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
     private void itmDeleteProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmDeleteProfessorActionPerformed
         FrmDeleteProfessor frmDeleteProfessor = new FrmDeleteProfessor();
         this.setVisible(false);
@@ -261,6 +267,20 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         frmUpdateProfessor.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_itmUpdateProfessorActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        FrmAbout frmAbout = new FrmAbout();
+        this.setVisible(false);
+        frmAbout.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        FrmCreateUser frmCreateUser = new FrmCreateUser();
+        this.setVisible(false);
+        frmCreateUser.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -317,6 +337,7 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenu mnuAcademyGradeRegister;
     private javax.swing.JMenu mnuGrade;
     private javax.swing.JMenu mnuProfessor;

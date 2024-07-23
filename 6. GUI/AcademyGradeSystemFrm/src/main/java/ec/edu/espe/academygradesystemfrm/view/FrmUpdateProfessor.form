@@ -141,6 +141,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtIdProfessor">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtIdProfessorActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblNewName">
           <Properties>

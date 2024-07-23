@@ -66,6 +66,12 @@ public class FrmUpdateProfessor extends javax.swing.JFrame {
 
         lblIdProfessor.setText("Ingrese el ID del profesor:");
 
+        txtIdProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdProfessorActionPerformed(evt);
+            }
+        });
+
         lblNewName.setText("Ingrese nuevo nombre:");
 
         jLabel2.setText("Ingrese nuevo departamento:");
@@ -193,6 +199,10 @@ public class FrmUpdateProfessor extends javax.swing.JFrame {
         
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAcceptActionPerformed
+
+    private void txtIdProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdProfessorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdProfessorActionPerformed
 
     /**
      * @param args the command line arguments

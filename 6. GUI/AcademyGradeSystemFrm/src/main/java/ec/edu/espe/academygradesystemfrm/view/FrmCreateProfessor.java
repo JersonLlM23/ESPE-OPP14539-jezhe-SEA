@@ -36,7 +36,7 @@ public class FrmCreateProfessor extends javax.swing.JFrame {
         txtFullNameProfessor = new javax.swing.JTextField();
         txtDeparment = new javax.swing.JTextField();
         btnCrearProfesor = new javax.swing.JButton();
-        txtIdProfessor = new javax.swing.JTextField();
+        txtId = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         btnAcademyGradeRegister = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
@@ -62,7 +62,7 @@ public class FrmCreateProfessor extends javax.swing.JFrame {
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        lblIdProfessor.setText("Cédula de identidad:");
+        lblIdProfessor.setText("Id:");
 
         lblFullNameProfessor.setText("Apellidos y Nombres:");
 
@@ -81,9 +81,9 @@ public class FrmCreateProfessor extends javax.swing.JFrame {
             }
         });
 
-        txtIdProfessor.addActionListener(new java.awt.event.ActionListener() {
+        txtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIdProfessorActionPerformed(evt);
+                txtIdActionPerformed(evt);
             }
         });
 
@@ -102,10 +102,9 @@ public class FrmCreateProfessor extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                             .addGap(121, 121, 121)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(txtIdProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(0, 0, Short.MAX_VALUE))
-                                .addComponent(txtFullNameProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtFullNameProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(0, 0, Short.MAX_VALUE))))
                 .addGap(91, 91, 91))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
@@ -126,7 +125,7 @@ public class FrmCreateProfessor extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblIdProfessor)
-                    .addComponent(txtIdProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblDepartment)
@@ -211,19 +210,19 @@ public class FrmCreateProfessor extends javax.swing.JFrame {
     private void btnCrearProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearProfesorActionPerformed
         try {
         CreateProfessor professor;
-
-        int id;
+        
         String name;
+        int id;
         String deparment;
 
-        String idTextProfessor = txtIdProfessor.getText();
+        String idTextProfessor = txtId.getText();
         // Verificación de longitud del ID
         if (idTextProfessor.length() > 10) {
             JOptionPane.showMessageDialog(this, "El ID no debe tener más de 10 dígitos.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
-            txtIdProfessor.setForeground(Color.RED);  // Cambiar el color del texto a rojo
-            txtIdProfessor.requestFocus();  // Regresar el foco al campo de texto
+            txtId.setForeground(Color.RED);  // Cambiar el color del texto a rojo
+            txtId.requestFocus();  // Regresar el foco al campo de texto
             return;
-        }
+            }
 
         id = Integer.parseInt(idTextProfessor);
         name = txtFullNameProfessor.getText();
@@ -242,31 +241,31 @@ public class FrmCreateProfessor extends javax.swing.JFrame {
         ProfessorToMongo.uploadProfessorData(professor);
 
         JOptionPane.showMessageDialog(this, "Profesor registrado exitosamente");
-        txtIdProfessor.setForeground(Color.BLACK);  // Restaurar el color del texto a negro
+        txtId.setForeground(Color.BLACK);  // Restaurar el color del texto a negro
         txtFullNameProfessor.setForeground(Color.BLACK);  // Restaurar el color del texto a negro
 
     } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(this, "El ID debe ser un número entero.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
-        txtIdProfessor.setForeground(Color.RED);  // Cambiar el color del texto a rojo
-        txtIdProfessor.setText("");
-        txtIdProfessor.requestFocus();  // Regresar el foco al campo de texto
+        txtId.setForeground(Color.RED);  // Cambiar el color del texto a rojo
+        txtId.setText("");
+        txtId.requestFocus();  // Regresar el foco al campo de texto
     } catch (Exception e) {
         JOptionPane.showMessageDialog(this, "Error al registrar datos del profesor: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
     }
     }//GEN-LAST:event_btnCrearProfesorActionPerformed
 
-    private void txtIdProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdProfessorActionPerformed
-        String idTextProfessor = txtIdProfessor.getText();
+    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
+        String idTextProfessor = txtId.getText();
         try {
             int idProfessor = Integer.parseInt(idTextProfessor);
-            txtIdProfessor.setForeground(Color.BLACK);
+            txtId.setForeground(Color.BLACK);
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "El ID debe ser un número entero.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
-            txtIdProfessor.setForeground(Color.RED);
-            txtIdProfessor.setText("");
-            txtIdProfessor.requestFocus();
+            txtId.setForeground(Color.RED);
+            txtId.setText("");
+            txtId.requestFocus();
         }
-    }//GEN-LAST:event_txtIdProfessorActionPerformed
+    }//GEN-LAST:event_txtIdActionPerformed
 
     private void txtFullNameProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFullNameProfessorActionPerformed
         // TODO add your handling code here:
@@ -320,6 +319,6 @@ public class FrmCreateProfessor extends javax.swing.JFrame {
     private javax.swing.JLabel lblIdProfessor;
     private javax.swing.JTextField txtDeparment;
     private javax.swing.JTextField txtFullNameProfessor;
-    private javax.swing.JTextField txtIdProfessor;
+    private javax.swing.JTextField txtId;
     // End of variables declaration//GEN-END:variables
 }

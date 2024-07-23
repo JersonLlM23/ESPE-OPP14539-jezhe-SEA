@@ -1,12 +1,15 @@
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\controller\DeleteStudentController.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\model\CreateStudent.java
+C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\utils\DeleteUserToMongo.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmReadProfessor.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\controller\CreateProfessorController.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmCreateProfessor.java
+C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\model\CreateUser.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\utils\DeleteStudentToMongo.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmUpdateStudentGrade.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\controller\DeleteProfessorController.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeSystemSplash.java
+C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmCreateAdministrator.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmEvaluateStudent.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmUpdateProfessor.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmDeleteProfessor.java
@@ -16,7 +19,9 @@ C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\e
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\utils\ProfessorToMongo.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\utils\UpdateProfessorToMongo.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmReadStudent.java
+C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmCreateUser.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmLogIn.java
+C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\utils\UserToMongo.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\controller\UpdateProfessorController.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\controller\UpdateStudentController.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmReadStudentGrade.java
@@ -27,5 +32,7 @@ C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\e
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\utils\StudentToMongo.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmDeleteStudentGrade.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmCreateStudent.java
+C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\controller\DeleteUserController.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmAbout.java
+C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\controller\CreateUserController.java
 C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmGenerateStudentReport.java
