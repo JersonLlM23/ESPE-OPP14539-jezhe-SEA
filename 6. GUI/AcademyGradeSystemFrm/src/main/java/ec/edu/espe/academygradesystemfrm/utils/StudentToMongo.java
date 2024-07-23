@@ -22,7 +22,7 @@ import org.bson.Document;
  */
 public class StudentToMongo {
     private static MongoClient createMongoClient() {
-    String connectionString = "mongodb+srv://ricardoandreslainezsuarez:ricardo_1422@ricardolainez.yyg9cp1.mongodb.net/";
+    String connectionString = "mongodb+srv://jezhe:jezheoop@cluster0.6vuzzwl.mongodb.net/";
         ServerApi serverApi = ServerApi.builder().version(ServerApiVersion.V1).build();
         
         MongoClientSettings settings = MongoClientSettings.builder()

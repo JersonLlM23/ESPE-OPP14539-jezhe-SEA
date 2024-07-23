@@ -18,6 +18,7 @@ ec\edu\espe\academygradesystemfrm\view\FrmAddGradeToStudent.class
 ec\edu\espe\academygradesystemfrm\view\FrmReadProfessor.class
 ec\edu\espe\academygradesystemfrm\view\FrmReadStudent$1.class
 ec\edu\espe\academygradesystemfrm\view\FrmLogIn$1.class
+ec\edu\espe\academygradesystemfrm\view\FrmCreateProfessor$4.class
 ec\edu\espe\academygradesystemfrm\view\FrmDeleteProfessor$2.class
 ec\edu\espe\academygradesystemfrm\controller\UpdateProfessorController.class
 ec\edu\espe\academygradesystemfrm\controller\DeleteProfessorController.class
@@ -33,6 +34,7 @@ ec\edu\espe\academygradesystemfrm\view\FrmDeleteProfessor.class
 ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeSystemSplash$2.class
 ec\edu\espe\academygradesystemfrm\view\FrmEvaluateStudent$1.class
 ec\edu\espe\academygradesystemfrm\view\FrmReadProfessor$1.class
+ec\edu\espe\academygradesystemfrm\view\FrmCreateProfessor$5.class
 ec\edu\espe\academygradesystemfrm\view\FrmCreateStudent$1.class
 ec\edu\espe\academygradesystemfrm\view\FrmDeleteProfessor$3.class
 ec\edu\espe\academygradesystemfrm\model\CreateProfessor.class
@@ -56,6 +58,7 @@ ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeSystemSplash.class
 ec\edu\espe\academygradesystemfrm\utils\ProfessorToMongo.class
 ec\edu\espe\academygradesystemfrm\view\FrmAbout.class
 ec\edu\espe\academygradesystemfrm\utils\UpdateStudentToMongo.class
+ec\edu\espe\academygradesystemfrm\view\FrmDeleteProfessor$4.class
 ec\edu\espe\academygradesystemfrm\view\FrmLogIn.class
 ec\edu\espe\academygradesystemfrm\view\FrmUpdateProfessor$3.class
 ec\edu\espe\academygradesystemfrm\view\FrmReadStudent.class
@@ -73,5 +76,6 @@ ec\edu\espe\academygradesystemfrm\view\FrmAbout$2.class
 ec\edu\espe\academygradesystemfrm\view\FrmDeleteProfessor$1.class
 ec\edu\espe\academygradesystemfrm\view\FrmDeleteStudent.class
 ec\edu\espe\academygradesystemfrm\view\FrmCreateProfessor.class
+ec\edu\espe\academygradesystemfrm\view\FrmDeleteStudent$4.class
 ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeRegister$4.class
 ec\edu\espe\academygradesystemfrm\view\FrmDeleteStudent$1.class

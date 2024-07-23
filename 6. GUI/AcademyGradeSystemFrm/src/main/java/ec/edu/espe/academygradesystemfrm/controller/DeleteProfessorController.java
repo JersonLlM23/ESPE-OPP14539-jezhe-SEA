@@ -24,7 +24,7 @@ public class DeleteProfessorController {
     public void deleteProfessor(int id){
         MongoCollection<Document> collection = mongoDBConnection.getCollection("professors");
         collection.deleteOne(Filters.eq("id", id));
-        System.out.println("profesor con " + id + " ha sido eliminado ");
+        System.out.println("El profesor con " + id + " ha sido eliminado. ");
         mongoDBConnection.closeConnection();
     }
     

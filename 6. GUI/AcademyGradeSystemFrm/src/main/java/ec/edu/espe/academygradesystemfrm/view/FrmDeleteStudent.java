@@ -62,6 +62,12 @@ public class FrmDeleteStudent extends javax.swing.JFrame {
 
         lblDeleteId.setText("Id del estudiante a eliminar:");
 
+        txtDeleteId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDeleteIdActionPerformed(evt);
+            }
+        });
+
         btnAccept.setText("Aceptar");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,6 +170,10 @@ public class FrmDeleteStudent extends javax.swing.JFrame {
         
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAcceptActionPerformed
+
+    private void txtDeleteIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDeleteIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDeleteIdActionPerformed
 
     /**
      * @param args the command line arguments

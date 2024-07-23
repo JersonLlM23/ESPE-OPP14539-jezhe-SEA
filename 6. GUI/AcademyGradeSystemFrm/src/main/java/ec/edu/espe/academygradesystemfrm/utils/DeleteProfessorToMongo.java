@@ -19,7 +19,7 @@ public class DeleteProfessorToMongo {
     private MongoClient mongoClient;
     
     public DeleteProfessorToMongo(){
-        mongoClient = MongoClients.create("mongodb+srv://ricardoandreslainezsuarez:ricardo_1422@ricardolainez.yyg9cp1.mongodb.net/");
+        mongoClient = MongoClients.create("mongodb+srv://jezhe:jezheoop@cluster0.6vuzzwl.mongodb.net/");
         database = mongoClient.getDatabase("AcademyGradeRegister");
         
     }
