@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="mnuAcademyGradeRegister">
+          <Properties>
+<<<<<<< HEAD:6. GUI/AcademyGradeSystemFrm/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/FrmAcademyGradeRegister.form
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="cc" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="33" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Academy Grade Register"/>
+=======
+            <Property name="text" type="java.lang.String" value="HOME"/>
+>>>>>>> 70997f4403c3a7a43bc766cce4441fe66ccb3a91:6. GUI/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/view/FrmAcademyGradeRegister.form
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Crear Usuario"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem2ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmLogout">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cerrar Sesi&#xf3;n"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmExit">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Salir"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmExitActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+<<<<<<< HEAD:6. GUI/AcademyGradeSystemFrm/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/FrmAcademyGradeRegister.form
+        <Menu class="javax.swing.JMenu" name="mnuStudent">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="99" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Student"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="itmCreateStudent">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="CreateStudent"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmCreateStudentActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmReadStudent">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="ReadStudent"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmReadStudentActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmUpdateStudent">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="UpdateStudent"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmUpdateStudentActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmDeleteStudent">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="DeleteStudent"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmDeleteStudentActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="mnuProfessor">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="99" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Professor"/>
+=======
+        <Menu class="javax.swing.JMenu" name="mnuProfessor">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="PROFESOR"/>
+>>>>>>> 70997f4403c3a7a43bc766cce4441fe66ccb3a91:6. GUI/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/view/FrmAcademyGradeRegister.form
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="itmCreateProfessor">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Registrar Profesor"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmCreateProfessorActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmReadProfessor">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Leer Profesor"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmReadProfessorActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmUpdateProfessor">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Actualizar Profesor"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmUpdateProfessorActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmDeleteProfessor">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Borrar Profesor"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmDeleteProfessorActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="mnuStudent">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="ESTUDIANTE"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="itmCreateStudent">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Registrar Estudiante"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmCreateStudentActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmReadStudent">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Leer Estudiante"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmReadStudentActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmUpdateStudent">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Actualizar Estudiante"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmUpdateStudentActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmDeleteStudent">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Eliminar Estudiante"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmDeleteStudentActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="mnuGrade">
+          <Properties>
+<<<<<<< HEAD:6. GUI/AcademyGradeSystemFrm/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/FrmAcademyGradeRegister.form
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="99" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Grade"/>
+=======
+            <Property name="text" type="java.lang.String" value="NOTAS"/>
+>>>>>>> 70997f4403c3a7a43bc766cce4441fe66ccb3a91:6. GUI/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/view/FrmAcademyGradeRegister.form
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="itmAddGradeToStudent">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Agregar Notas a Estudiantes"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmReadStudentGrade">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Leer Notas de Estudiantes"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmUpdateStudentGrade">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Actualizar Nota"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmDeleteStudentGrade">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Eliminar Nota"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="mnuReport">
+          <Properties>
+<<<<<<< HEAD:6. GUI/AcademyGradeSystemFrm/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/FrmAcademyGradeRegister.form
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="99" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Report"/>
+=======
+            <Property name="text" type="java.lang.String" value="REPORTE"/>
+>>>>>>> 70997f4403c3a7a43bc766cce4441fe66ccb3a91:6. GUI/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/view/FrmAcademyGradeRegister.form
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="itmGenerateStudentReport">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Generar Reporte de Notas"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmEvaluateStudent">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Evaluar Estudiante"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenu1">
+          <Properties>
+<<<<<<< HEAD:6. GUI/AcademyGradeSystemFrm/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/FrmAcademyGradeRegister.form
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="33" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Ayuda"/>
+=======
+            <Property name="text" type="java.lang.String" value="AYUDA"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="alignmentX" type="float" value="1.0"/>
+>>>>>>> 70997f4403c3a7a43bc766cce4441fe66ccb3a91:6. GUI/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/view/FrmAcademyGradeRegister.form
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Acerca de"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+<<<<<<< HEAD:6. GUI/AcademyGradeSystemFrm/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/FrmAcademyGradeRegister.form
+    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="ff" green="ff" red="cc" type="rgb"/>
+    </Property>
+=======
+    <Property name="autoRequestFocus" type="boolean" value="false"/>
+>>>>>>> 70997f4403c3a7a43bc766cce4441fe66ccb3a91:6. GUI/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/view/FrmAcademyGradeRegister.form
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <EmptySpace min="0" pref="800" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <EmptySpace min="0" pref="480" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+</Form>

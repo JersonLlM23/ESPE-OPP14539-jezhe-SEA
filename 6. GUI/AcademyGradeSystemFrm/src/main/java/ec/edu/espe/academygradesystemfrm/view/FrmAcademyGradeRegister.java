@@ -1,0 +1,400 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
+package ec.edu.espe.academygradesystemfrm.view;
+
+/**
+ *
+ * @author WINDOWS
+ */
+public class FrmAcademyGradeRegister extends javax.swing.JFrame {
+
+    /**
+     * Creates new form FrmAcademyGradeRegister
+     */
+    public FrmAcademyGradeRegister() {
+        initComponents();
+    }
+
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jMenuBar1 = new javax.swing.JMenuBar();
+        mnuAcademyGradeRegister = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        itmLogout = new javax.swing.JMenuItem();
+        itmExit = new javax.swing.JMenuItem();
+        mnuProfessor = new javax.swing.JMenu();
+        itmCreateProfessor = new javax.swing.JMenuItem();
+        itmReadProfessor = new javax.swing.JMenuItem();
+        itmUpdateProfessor = new javax.swing.JMenuItem();
+        itmDeleteProfessor = new javax.swing.JMenuItem();
+        mnuStudent = new javax.swing.JMenu();
+        itmCreateStudent = new javax.swing.JMenuItem();
+        itmReadStudent = new javax.swing.JMenuItem();
+        itmUpdateStudent = new javax.swing.JMenuItem();
+        itmDeleteStudent = new javax.swing.JMenuItem();
+        mnuGrade = new javax.swing.JMenu();
+        itmAddGradeToStudent = new javax.swing.JMenuItem();
+        itmReadStudentGrade = new javax.swing.JMenuItem();
+        itmUpdateStudentGrade = new javax.swing.JMenuItem();
+        itmDeleteStudentGrade = new javax.swing.JMenuItem();
+        mnuReport = new javax.swing.JMenu();
+        itmGenerateStudentReport = new javax.swing.JMenuItem();
+        itmEvaluateStudent = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+<<<<<<< HEAD:6. GUI/AcademyGradeSystemFrm/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/FrmAcademyGradeRegister.java
+        setBackground(new java.awt.Color(204, 255, 255));
+
+        mnuAcademyGradeRegister.setBackground(new java.awt.Color(204, 255, 255));
+        mnuAcademyGradeRegister.setForeground(new java.awt.Color(51, 51, 51));
+        mnuAcademyGradeRegister.setText("Academy Grade Register");
+=======
+        setAutoRequestFocus(false);
+
+        mnuAcademyGradeRegister.setText("HOME");
+>>>>>>> 70997f4403c3a7a43bc766cce4441fe66ccb3a91:6. GUI/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/view/FrmAcademyGradeRegister.java
+
+        jMenuItem2.setText("Crear Usuario");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        mnuAcademyGradeRegister.add(jMenuItem2);
+
+        itmLogout.setText("Cerrar Sesión");
+        mnuAcademyGradeRegister.add(itmLogout);
+
+        itmExit.setText("Salir");
+        itmExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmExitActionPerformed(evt);
+            }
+        });
+        mnuAcademyGradeRegister.add(itmExit);
+
+        jMenuBar1.add(mnuAcademyGradeRegister);
+
+<<<<<<< HEAD:6. GUI/AcademyGradeSystemFrm/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/FrmAcademyGradeRegister.java
+        mnuStudent.setBackground(new java.awt.Color(153, 255, 255));
+        mnuStudent.setText("Student");
+=======
+        mnuProfessor.setText("PROFESOR");
+>>>>>>> 70997f4403c3a7a43bc766cce4441fe66ccb3a91:6. GUI/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/view/FrmAcademyGradeRegister.java
+
+        itmCreateProfessor.setText("Registrar Profesor");
+        itmCreateProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmCreateProfessorActionPerformed(evt);
+            }
+        });
+        mnuProfessor.add(itmCreateProfessor);
+
+        itmReadProfessor.setText("Leer Profesor");
+        itmReadProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmReadProfessorActionPerformed(evt);
+            }
+        });
+        mnuProfessor.add(itmReadProfessor);
+
+        itmUpdateProfessor.setText("Actualizar Profesor");
+        itmUpdateProfessor.setToolTipText("");
+        itmUpdateProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmUpdateProfessorActionPerformed(evt);
+            }
+        });
+        mnuProfessor.add(itmUpdateProfessor);
+
+        itmDeleteProfessor.setText("Borrar Profesor");
+        itmDeleteProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmDeleteProfessorActionPerformed(evt);
+            }
+        });
+        mnuProfessor.add(itmDeleteProfessor);
+
+        jMenuBar1.add(mnuProfessor);
+
+        mnuStudent.setText("ESTUDIANTE");
+
+        itmCreateStudent.setText("Registrar Estudiante");
+        itmCreateStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmCreateStudentActionPerformed(evt);
+            }
+        });
+        mnuStudent.add(itmCreateStudent);
+
+        itmReadStudent.setText("Leer Estudiante");
+        itmReadStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmReadStudentActionPerformed(evt);
+            }
+        });
+        mnuStudent.add(itmReadStudent);
+
+        itmUpdateStudent.setText("Actualizar Estudiante");
+        itmUpdateStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmUpdateStudentActionPerformed(evt);
+            }
+        });
+        mnuStudent.add(itmUpdateStudent);
+
+        itmDeleteStudent.setText("Eliminar Estudiante");
+        itmDeleteStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmDeleteStudentActionPerformed(evt);
+            }
+        });
+        mnuStudent.add(itmDeleteStudent);
+
+        jMenuBar1.add(mnuStudent);
+
+<<<<<<< HEAD:6. GUI/AcademyGradeSystemFrm/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/FrmAcademyGradeRegister.java
+        mnuProfessor.setBackground(new java.awt.Color(153, 255, 255));
+        mnuProfessor.setText("Professor");
+
+        itmCreateProfessor.setText("CreateProfessor");
+        itmCreateProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmCreateProfessorActionPerformed(evt);
+            }
+        });
+        mnuProfessor.add(itmCreateProfessor);
+
+        itmReadProfessor.setText("ReadProfessor");
+        itmReadProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmReadProfessorActionPerformed(evt);
+            }
+        });
+        mnuProfessor.add(itmReadProfessor);
+
+        itmUpdateProfessor.setText("UpdateProfessor");
+        mnuProfessor.add(itmUpdateProfessor);
+
+        itmDeleteProfessor.setText("DeleteProfessor");
+        mnuProfessor.add(itmDeleteProfessor);
+
+        jMenuBar1.add(mnuProfessor);
+
+        mnuGrade.setBackground(new java.awt.Color(153, 255, 255));
+        mnuGrade.setText("Grade");
+
+        itmAddGradeToStudent.setText("AddGradeToStudent");
+=======
+        mnuGrade.setText("NOTAS");
+
+        itmAddGradeToStudent.setText("Agregar Notas a Estudiantes");
+>>>>>>> 70997f4403c3a7a43bc766cce4441fe66ccb3a91:6. GUI/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/view/FrmAcademyGradeRegister.java
+        mnuGrade.add(itmAddGradeToStudent);
+
+        itmReadStudentGrade.setText("Leer Notas de Estudiantes");
+        mnuGrade.add(itmReadStudentGrade);
+
+        itmUpdateStudentGrade.setText("Actualizar Nota");
+        mnuGrade.add(itmUpdateStudentGrade);
+
+        itmDeleteStudentGrade.setText("Eliminar Nota");
+        mnuGrade.add(itmDeleteStudentGrade);
+
+        jMenuBar1.add(mnuGrade);
+
+<<<<<<< HEAD:6. GUI/AcademyGradeSystemFrm/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/FrmAcademyGradeRegister.java
+        mnuReport.setBackground(new java.awt.Color(153, 255, 255));
+        mnuReport.setText("Report");
+=======
+        mnuReport.setText("REPORTE");
+>>>>>>> 70997f4403c3a7a43bc766cce4441fe66ccb3a91:6. GUI/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/view/FrmAcademyGradeRegister.java
+
+        itmGenerateStudentReport.setText("Generar Reporte de Notas");
+        mnuReport.add(itmGenerateStudentReport);
+
+        itmEvaluateStudent.setText("Evaluar Estudiante");
+        mnuReport.add(itmEvaluateStudent);
+
+        jMenuBar1.add(mnuReport);
+
+<<<<<<< HEAD:6. GUI/AcademyGradeSystemFrm/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/FrmAcademyGradeRegister.java
+        jMenu1.setBackground(new java.awt.Color(51, 204, 255));
+        jMenu1.setText("Ayuda");
+=======
+        jMenu1.setText("AYUDA");
+        jMenu1.setToolTipText("");
+        jMenu1.setAlignmentX(1.0F);
+>>>>>>> 70997f4403c3a7a43bc766cce4441fe66ccb3a91:6. GUI/AcademyGradeSystemFrm/src/main/java/ec/edu/espe/academygradesystemfrm/view/FrmAcademyGradeRegister.java
+
+        jMenuItem1.setText("Acerca de");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 800, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 480, Short.MAX_VALUE)
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void itmCreateStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmCreateStudentActionPerformed
+        FrmCreateStudent frmCreateStudent = new FrmCreateStudent();
+        this.setVisible(false);
+        frmCreateStudent.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmCreateStudentActionPerformed
+
+    private void itmExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmExitActionPerformed
+        System.exit(0);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmExitActionPerformed
+
+    private void itmReadStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmReadStudentActionPerformed
+        FrmReadStudent frmReadStudent = new FrmReadStudent();
+        this.setVisible(false);
+        frmReadStudent.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmReadStudentActionPerformed
+
+    private void itmUpdateStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmUpdateStudentActionPerformed
+        FrmUpdateStudent frmUpdateStudent = new FrmUpdateStudent();
+        this.setVisible(false);
+        frmUpdateStudent.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmUpdateStudentActionPerformed
+
+    private void itmDeleteStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmDeleteStudentActionPerformed
+        FrmDeleteStudent frmDeleteStudent = new FrmDeleteStudent();
+        this.setVisible(false);
+        frmDeleteStudent.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmDeleteStudentActionPerformed
+
+    private void itmCreateProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmCreateProfessorActionPerformed
+        FrmCreateProfessor frmCreateProfessor = new FrmCreateProfessor();
+        this.setVisible(false);
+        frmCreateProfessor.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmCreateProfessorActionPerformed
+
+    private void itmReadProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmReadProfessorActionPerformed
+        FrmReadProfessor frmReadProfessor = new FrmReadProfessor();
+        this.setVisible(false);
+        frmReadProfessor.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmReadProfessorActionPerformed
+
+    private void itmDeleteProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmDeleteProfessorActionPerformed
+        FrmDeleteProfessor frmDeleteProfessor = new FrmDeleteProfessor();
+        this.setVisible(false);
+        frmDeleteProfessor.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmDeleteProfessorActionPerformed
+
+    private void itmUpdateProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmUpdateProfessorActionPerformed
+        FrmUpdateProfessor frmUpdateProfessor = new FrmUpdateProfessor();
+        this.setVisible(false);
+        frmUpdateProfessor.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmUpdateProfessorActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        FrmAbout frmAbout = new FrmAbout();
+        this.setVisible(false);
+        frmAbout.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        FrmCreateUser frmCreateUser = new FrmCreateUser();
+        this.setVisible(false);
+        frmCreateUser.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(FrmAcademyGradeRegister.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(FrmAcademyGradeRegister.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(FrmAcademyGradeRegister.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(FrmAcademyGradeRegister.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new FrmAcademyGradeRegister().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem itmAddGradeToStudent;
+    private javax.swing.JMenuItem itmCreateProfessor;
+    private javax.swing.JMenuItem itmCreateStudent;
+    private javax.swing.JMenuItem itmDeleteProfessor;
+    private javax.swing.JMenuItem itmDeleteStudent;
+    private javax.swing.JMenuItem itmDeleteStudentGrade;
+    private javax.swing.JMenuItem itmEvaluateStudent;
+    private javax.swing.JMenuItem itmExit;
+    private javax.swing.JMenuItem itmGenerateStudentReport;
+    private javax.swing.JMenuItem itmLogout;
+    private javax.swing.JMenuItem itmReadProfessor;
+    private javax.swing.JMenuItem itmReadStudent;
+    private javax.swing.JMenuItem itmReadStudentGrade;
+    private javax.swing.JMenuItem itmUpdateProfessor;
+    private javax.swing.JMenuItem itmUpdateStudent;
+    private javax.swing.JMenuItem itmUpdateStudentGrade;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenu mnuAcademyGradeRegister;
+    private javax.swing.JMenu mnuGrade;
+    private javax.swing.JMenu mnuProfessor;
+    private javax.swing.JMenu mnuReport;
+    private javax.swing.JMenu mnuStudent;
+    // End of variables declaration//GEN-END:variables
+}
