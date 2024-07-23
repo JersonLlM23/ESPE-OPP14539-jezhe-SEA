@@ -57,8 +57,5 @@ public class CreateStudent {
         this.degree = degree;
         this.age = age;
     }
-    
-    
-    
-    
+       
 }

@@ -184,7 +184,7 @@ public class FrmCreateProfessor extends javax.swing.JFrame {
         CreateProfessorController controller = new CreateProfessorController();
         controller.insertProfessor(professor);
         
-        JOptionPane.showMessageDialog(this, "professor registrado exitosamente");
+        JOptionPane.showMessageDialog(this, "profesor registrado exitosamente");
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAcceptActionPerformed
 

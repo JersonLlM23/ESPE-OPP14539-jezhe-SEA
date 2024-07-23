@@ -35,6 +35,7 @@ public class FrmAcademyGradeSystemSplash extends javax.swing.JFrame {
         btnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel1.setText("Academy Grade System");
 

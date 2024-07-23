@@ -52,8 +52,11 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 255, 255));
 
-        mnuAcademyGradeRegister.setText("Academy Grade register");
+        mnuAcademyGradeRegister.setBackground(new java.awt.Color(204, 255, 255));
+        mnuAcademyGradeRegister.setForeground(new java.awt.Color(51, 51, 51));
+        mnuAcademyGradeRegister.setText("Academy Grade Register");
 
         itmLogout.setText("logout");
         mnuAcademyGradeRegister.add(itmLogout);
@@ -68,6 +71,7 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
 
         jMenuBar1.add(mnuAcademyGradeRegister);
 
+        mnuStudent.setBackground(new java.awt.Color(153, 255, 255));
         mnuStudent.setText("Student");
 
         itmCreateStudent.setText("CreateStudent");
@@ -104,6 +108,7 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
 
         jMenuBar1.add(mnuStudent);
 
+        mnuProfessor.setBackground(new java.awt.Color(153, 255, 255));
         mnuProfessor.setText("Professor");
 
         itmCreateProfessor.setText("CreateProfessor");
@@ -130,6 +135,7 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
 
         jMenuBar1.add(mnuProfessor);
 
+        mnuGrade.setBackground(new java.awt.Color(153, 255, 255));
         mnuGrade.setText("Grade");
 
         itmAddGradeToStudent.setText("AddGradeToStudent");
@@ -146,6 +152,7 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
 
         jMenuBar1.add(mnuGrade);
 
+        mnuReport.setBackground(new java.awt.Color(153, 255, 255));
         mnuReport.setText("Report");
 
         itmGenerateStudentReport.setText("GenerateStudentReport");
@@ -156,6 +163,7 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
 
         jMenuBar1.add(mnuReport);
 
+        jMenu1.setBackground(new java.awt.Color(51, 204, 255));
         jMenu1.setText("Ayuda");
 
         jMenuItem1.setText("acerca");
