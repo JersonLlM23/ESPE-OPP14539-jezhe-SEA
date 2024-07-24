@@ -106,6 +106,7 @@ ec\edu\espe\academygradesystemfrm\view\FrmUpdateProfessor$3.class
 ec\edu\espe\academygradesystemfrm\view\FrmDeleteStudentGrade$1.class
 ec\edu\espe\academygradesystemfrm\view\FrmGenerateStudentReport.class
 ec\edu\espe\academygradesystemfrm\controller\DeleteStudentController.class
+ec\edu\espe\academygradesystemfrm\view\FrmGenerateStudentReport$2.class
 ec\edu\espe\academygradesystemfrm\view\FrmLogIn$3.class
 ec\edu\espe\academygradesystemfrm\view\FrmUpdateProfessor$2.class
 ec\edu\espe\academygradesystemfrm\view\FrmCreateStudent$2.class
