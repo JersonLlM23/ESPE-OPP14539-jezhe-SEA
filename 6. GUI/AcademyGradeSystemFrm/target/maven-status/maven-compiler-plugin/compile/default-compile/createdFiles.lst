@@ -9,6 +9,7 @@ ec\edu\espe\academygradesystemfrm\view\FrmLogIn$7.class
 ec\edu\espe\academygradesystemfrm\controller\CreateProfessorController.class
 ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeRegister$10.class
 ec\edu\espe\academygradesystemfrm\view\FrmAddGradeToStudent$3.class
+ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeRegister$16.class
 ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeSystemSplash$1.class
 ec\edu\espe\academygradesystemfrm\view\FrmAddGradeToStudent.class
 ec\edu\espe\academygradesystemfrm\view\FrmReadStudent$1.class
