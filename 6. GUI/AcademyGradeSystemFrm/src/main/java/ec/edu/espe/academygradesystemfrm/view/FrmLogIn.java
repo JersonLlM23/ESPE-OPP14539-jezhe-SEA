@@ -78,6 +78,11 @@ public class FrmLogIn extends javax.swing.JFrame {
                 txtUserNameMousePressed(evt);
             }
         });
+        txtUserName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUserNameActionPerformed(evt);
+            }
+        });
 
         btnLogin.setBackground(new java.awt.Color(51, 153, 255));
         btnLogin.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
@@ -313,6 +318,10 @@ public class FrmLogIn extends javax.swing.JFrame {
             txtUserName.setForeground(Color.gray);
         }
     }//GEN-LAST:event_pwdLoginMousePressed
+
+    private void txtUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUserNameActionPerformed
 
     /**
      * @param args the command line arguments

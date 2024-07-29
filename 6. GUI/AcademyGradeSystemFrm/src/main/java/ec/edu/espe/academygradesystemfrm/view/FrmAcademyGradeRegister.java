@@ -170,11 +170,6 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         mnuGrade.add(itmReadStudentGrade);
 
         itmUpdateStudentGrade.setText("Actualizar Nota");
-        itmUpdateStudentGrade.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itmUpdateStudentGradeActionPerformed(evt);
-            }
-        });
         mnuGrade.add(itmUpdateStudentGrade);
 
         itmDeleteStudentGrade.setText("Eliminar Nota");
@@ -331,13 +326,6 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         frmDeleteStudentGrade.setVisible(true);  
         // TODO add your handling code here:
     }//GEN-LAST:event_itmDeleteStudentGradeActionPerformed
-
-    private void itmUpdateStudentGradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmUpdateStudentGradeActionPerformed
-        FrmUpdateStudentGrade  frmUpdateStudentGrade = new  FrmUpdateStudentGrade();
-        this.setVisible(false);
-        frmUpdateStudentGrade.setVisible(true);  
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itmUpdateStudentGradeActionPerformed
 
     /**
      * @param args the command line arguments

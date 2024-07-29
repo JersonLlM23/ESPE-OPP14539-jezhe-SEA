@@ -9,7 +9,6 @@ import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Updates;
 import ec.edu.espe.academygradesystemfrm.utils.UpdateGradeToMongo;
-import ec.edu.espe.academygradesystemfrm.utils.UpdateProfessorToMongo;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 
