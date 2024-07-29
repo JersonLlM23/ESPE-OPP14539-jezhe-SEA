@@ -33,12 +33,12 @@ public class GradeToMongo {
             MongoCollection<Document> collection = database.getCollection("grades");
 
             Document gradeDocument = new Document("studentId", studentId)
-                .append("Materia", materia)
-                .append("PrimerParcial", primerParcial)
-                .append("SegundoParcial", segundoParcial)
-                .append("TercerParcial", tercerParcial)
-                .append("Promedio", promedio)
-                .append("Estado", estado);
+                .append("materia", materia)
+                .append("primerParcial", primerParcial)
+                .append("segundoParcial", segundoParcial)
+                .append("tercerParcial", tercerParcial)
+                .append("promedio", promedio)
+                .append("estado", estado);
 
             collection.insertOne(gradeDocument);
             System.out.println("Calificaciones guardadas exitosamente en la colección 'grades'.");

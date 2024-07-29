@@ -72,12 +72,8 @@
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="btnLogin" min="-2" pref="100" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jButton1" min="-2" pref="241" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="btnLogin" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="pwdLogin" min="-2" pref="377" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="150" pref="422" max="32767" attributes="0"/>
@@ -102,10 +98,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="pwdLogin" min="-2" pref="38" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnLogin" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="jButton1" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="btnLogin" min="-2" pref="40" max="-2" attributes="0"/>
                   <EmptySpace pref="120" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -258,20 +251,6 @@
             </Container>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton1">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="99" red="33" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Lucida Fax" size="18" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Crear Nuevo Usuario"/>
-          </Properties>
-        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
