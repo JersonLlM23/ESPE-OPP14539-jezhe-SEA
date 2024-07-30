@@ -260,9 +260,10 @@ public class FrmLogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_lblexitMouseClicked
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        FrmAcademyGradeRegister frmAcademyGradeRegister = new FrmAcademyGradeRegister();
+        FrmAcademyGradeRegister FrmAcademyGradeRegister = new FrmAcademyGradeRegister();
         this.setVisible(false);
-        frmAcademyGradeRegister.setVisible(true);
+        FrmAcademyGradeRegister.setVisible(true);
+
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLoginActionPerformed
 

@@ -57,6 +57,11 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         mnuAcademyGradeRegister.setText("HOME");
 
         itmLogout.setText("Cerrar Sesión");
+        itmLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmLogoutActionPerformed(evt);
+            }
+        });
         mnuAcademyGradeRegister.add(itmLogout);
 
         itmExit.setText("Salir");
@@ -310,6 +315,14 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         frmDeleteStudentGrade.setVisible(true);  
         // TODO add your handling code here:
     }//GEN-LAST:event_itmDeleteStudentGradeActionPerformed
+
+    private void itmLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmLogoutActionPerformed
+        // TODO add your handling code here:
+        FrmLogIn frmLogIn = new FrmLogIn();
+        this.setVisible(false);
+        frmLogIn.setVisible(true);
+
+    }//GEN-LAST:event_itmLogoutActionPerformed
 
     /**
      * @param args the command line arguments
