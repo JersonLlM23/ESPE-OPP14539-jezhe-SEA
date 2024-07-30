@@ -28,7 +28,6 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
 
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuAcademyGradeRegister = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
         itmLogout = new javax.swing.JMenuItem();
         itmExit = new javax.swing.JMenuItem();
         mnuProfessor = new javax.swing.JMenu();
@@ -56,14 +55,6 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         setAutoRequestFocus(false);
 
         mnuAcademyGradeRegister.setText("HOME");
-
-        jMenuItem2.setText("Crear Usuario");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        mnuAcademyGradeRegister.add(jMenuItem2);
 
         itmLogout.setText("Cerrar Sesión");
         mnuAcademyGradeRegister.add(itmLogout);
@@ -295,13 +286,6 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-        FrmCreateUser frmCreateUser = new FrmCreateUser();
-        this.setVisible(false);
-        frmCreateUser.setVisible(true);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
     private void itmGenerateStudentReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmGenerateStudentReportActionPerformed
         FrmGenerateStudentReport  frmGenerateStudentReport = new  FrmGenerateStudentReport();
         this.setVisible(false);
@@ -382,7 +366,6 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenu mnuAcademyGradeRegister;
     private javax.swing.JMenu mnuGrade;
     private javax.swing.JMenu mnuProfessor;
