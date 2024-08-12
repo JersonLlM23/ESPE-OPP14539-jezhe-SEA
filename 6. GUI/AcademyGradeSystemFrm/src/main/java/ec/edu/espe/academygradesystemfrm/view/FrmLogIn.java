@@ -4,7 +4,10 @@
  */
 package ec.edu.espe.academygradesystemfrm.view;
 
+import ec.edu.espe.academygradesystemfrm.model.CreateUser;
+import ec.edu.espe.academygradesystemfrm.utils.UserToMongo;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -279,6 +282,25 @@ public class FrmLogIn extends javax.swing.JFrame {
 
     private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseClicked
         // TODO add your handling code here:
+        String username = txtUserName.getText();
+        String password = String.valueOf(pwdLogin.getPassword());
+
+        if (username.isEmpty() || password.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese el nombre de usuario y la contraseña", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        int id = generateUniqueId(); 
+
+        CreateUser user = new CreateUser(id, username, password);
+
+        UserToMongo.uploadUserData(user);
+
+        JOptionPane.showMessageDialog(this, "Usuario guardado exitosamente!", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    private int generateUniqueId() {
+        return (int) (Math.random() * 10000);
     }//GEN-LAST:event_btnLoginMouseClicked
 
     private void txtUserNameMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUserNameMousePressed

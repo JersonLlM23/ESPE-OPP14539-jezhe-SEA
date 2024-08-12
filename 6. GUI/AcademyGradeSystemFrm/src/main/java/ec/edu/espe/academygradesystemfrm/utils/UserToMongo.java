@@ -35,6 +35,8 @@ public class UserToMongo {
         try(MongoClient mongoClient = createMongoClient()){
             MongoDatabase database = mongoClient.getDatabase("AcademyGradeRegister");
             
+            
+            
             saveUserToDatabase(user, database);
         
         }catch(Exception e){
@@ -45,7 +47,7 @@ public class UserToMongo {
         MongoCollection<Document> collection = database.getCollection("users");
         Document professorsDocument = new Document("id", user.getId())
                 .append("Nombre de usuario", user.getUsername())
-                .append("Contraseña", user.getPassword());
+                .append("Contraseña", encryptPassword(user.getPassword()));
                 
         try{
             collection.insertOne(professorsDocument);
@@ -55,6 +57,14 @@ public class UserToMongo {
         }
         
     }
+    private static String encryptPassword(String password) {
+        StringBuilder encrypted = new StringBuilder();
+        for (char c : password.toCharArray()) {
+            encrypted.append((char) (c + 1));
+        }
+        return encrypted.toString();
+    } 
+     
         public MongoCollection<Document> getCollection(String collectionName){
         return database.getCollection(collectionName);
     }
