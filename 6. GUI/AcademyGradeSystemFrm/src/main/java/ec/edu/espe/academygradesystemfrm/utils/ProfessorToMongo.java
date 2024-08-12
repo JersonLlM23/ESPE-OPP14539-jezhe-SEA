@@ -26,7 +26,36 @@ public class ProfessorToMongo {
                 .applyConnectionString(new ConnectionString(connectionString)).serverApi(serverApi).build();
         return MongoClients.create(settings);
     }
-     public static void uploadProfessorData(CreateProfessor professor){
+public static CreateProfessor getProfessorById(int professorId) {
+    CreateProfessor professor = null;
+    
+    try (MongoClient mongoClient = createMongoClient()) {
+        MongoDatabase database = mongoClient.getDatabase("AcademyGradeRegister");
+        MongoCollection<Document> collection = database.getCollection("professors");
+        
+        Document query = new Document("id", professorId);
+        Document professorDocument = collection.find(query).first();
+        
+        if (professorDocument != null) {
+            String name = professorDocument.getString("Nombre");
+            String department = professorDocument.getString("Departamento");
+
+            // Verificar y depurar
+            if (department == null) {
+                System.out.println("Departamento es null para el ID de profesor: " + professorId);
+            } else {
+                System.out.println("Nombre: " + name + ", Departamento: " + department);
+                professor = new CreateProfessor(professorId, name, department);
+            }
+        }
+    } catch (MongoException e) {
+        e.printStackTrace();
+    }
+    return professor;
+}
+
+
+    public static void uploadProfessorData(CreateProfessor professor){
         try(MongoClient mongoClient = createMongoClient()){
             MongoDatabase database = mongoClient.getDatabase("AcademyGradeRegister");
             
@@ -40,11 +69,11 @@ public class ProfessorToMongo {
         MongoCollection<Document> collection = database.getCollection("professors");
         Document professorsDocument = new Document("id", professor.getId())
                 .append("Nombre", professor.getName())
-                .append("Departamento", professor.getDeparment());
+                .append("Departamento", professor.getDepartment());
                 
         try{
             collection.insertOne(professorsDocument);
-            System.out.println("student guardado exitosamente!!");
+            System.out.println("Profesor guardado exitosamente!!");
         }catch(MongoException e){
             e.printStackTrace();
         }

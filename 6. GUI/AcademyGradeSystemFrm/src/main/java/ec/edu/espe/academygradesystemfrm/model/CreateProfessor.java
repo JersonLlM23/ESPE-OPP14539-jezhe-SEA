@@ -13,7 +13,7 @@ import org.bson.Document;
 public class CreateProfessor {
     private int id;
     private String name;
-    private String deparment;
+    private String department;
 
     public int getId() {
         return id;
@@ -31,27 +31,27 @@ public class CreateProfessor {
         this.name = name;
     }
 
-    public String getDeparment() {
-        return deparment;
+    public String getDepartment() {
+        return department;
     }
 
-    public void setDeparment(String deparment) {
-        this.deparment = deparment;
+    public void setDepartment(String deparment) {
+        this.department = deparment;
     }
 
     @Override
     public String toString() {
-        return "CreateProfessor{" + "id=" + id + ", name=" + name + ", deparment=" + deparment + '}';
+        return "CreateProfessor{" + "id=" + id + ", name=" + name + ", department=" + department + '}';
     }
 
     public CreateProfessor(int id, String name, String deparment) {
         this.id = id;
         this.name = name;
-        this.deparment = deparment;
+        this.department = deparment;
     }
     
     public Document toDocument(){
-        return new Document("id", id).append("Nombre", name).append("Departamento", deparment);
+        return new Document("id", id).append("Nombre", name).append("Departamento", department);
     }
-    
+
 }

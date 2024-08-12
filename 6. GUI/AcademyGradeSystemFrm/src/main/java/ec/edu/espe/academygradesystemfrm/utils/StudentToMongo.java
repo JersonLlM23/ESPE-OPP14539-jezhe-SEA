@@ -30,7 +30,30 @@ public class StudentToMongo {
      
         return MongoClients.create(settings);
     }
+    public static CreateStudent getStudentById(int studentId) {
+    CreateStudent student = null;
     
+    try (MongoClient mongoClient = createMongoClient()) {
+        MongoDatabase database = mongoClient.getDatabase("AcademyGradeRegister");
+        MongoCollection<Document> collection = database.getCollection("students");
+        
+        Document query = new Document("id", studentId);
+        Document studentDocument = collection.find(query).first();
+        
+        if (studentDocument != null) {
+            String name = studentDocument.getString("nombre");
+            String degree = studentDocument.getString("grado");
+            String age = studentDocument.getString("edad");
+            
+            student = new CreateStudent(studentId, name, degree, age);
+        }
+    } catch (MongoException e) {
+        e.printStackTrace();
+    }
+    
+    return student;
+}
+
     public static void uploadSudentData(CreateStudent student){
         try(MongoClient mongoClient = createMongoClient()){
             MongoDatabase database = mongoClient.getDatabase("AcademyGradeRegister");
