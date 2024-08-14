@@ -6,7 +6,7 @@ package ec.edu.espe.academygradesystemfrm.model;
 
 /**
  *
- * @author WINDOWS
+ * @author Lainez Ricardo JEZHE SEA - ESPE
  */
 public class CreateStudent {
     private int id;

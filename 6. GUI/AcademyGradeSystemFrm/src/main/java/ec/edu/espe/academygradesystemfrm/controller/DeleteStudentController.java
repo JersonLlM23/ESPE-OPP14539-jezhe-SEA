@@ -11,7 +11,7 @@ import org.bson.Document;
 
 /**
  *
- * @author WINDOWS
+ * @author Lainez Ricardo JEZHE SEA - ESPE
  */
 public class DeleteStudentController {
     private DeleteStudentToMongo mongoDBConnection;

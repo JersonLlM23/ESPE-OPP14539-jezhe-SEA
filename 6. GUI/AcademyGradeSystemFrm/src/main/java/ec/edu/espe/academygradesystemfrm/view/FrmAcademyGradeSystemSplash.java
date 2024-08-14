@@ -8,7 +8,7 @@ import java.awt.Color;
 
 /**
  *
- * @author WINDOWS
+ * @author Lainez Ricardo JEZHE SEA - ESPE
  */
 public class FrmAcademyGradeSystemSplash extends javax.swing.JFrame {
         int xMouse, yMouse;

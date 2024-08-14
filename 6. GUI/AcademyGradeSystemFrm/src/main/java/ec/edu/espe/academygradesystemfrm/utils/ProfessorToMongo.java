@@ -14,7 +14,7 @@ import org.bson.Document;
 
 /**
  *
- * @author WINDOWS
+ * @author Lainez Ricardo JEZHE SEA - ESPE
  */
 public class ProfessorToMongo {
     private MongoDatabase database;

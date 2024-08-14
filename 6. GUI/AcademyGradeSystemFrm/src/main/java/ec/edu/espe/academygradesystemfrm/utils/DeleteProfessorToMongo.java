@@ -12,7 +12,7 @@ import org.bson.Document;
 
 /**
  *
- * @author WINDOWS
+ * @author Lainez Ricardo JEZHE SEA - ESPE
  */
 public class DeleteProfessorToMongo {
     private MongoDatabase database;

@@ -6,7 +6,7 @@ package ec.edu.espe.academygradesystemfrm.view;
 
 /**
  *
- * @author WINDOWS
+ * @author Lainez Ricardo JEZHE SEA - ESPE
  */
 public class FrmUpdateStudentGrade extends javax.swing.JFrame {
 

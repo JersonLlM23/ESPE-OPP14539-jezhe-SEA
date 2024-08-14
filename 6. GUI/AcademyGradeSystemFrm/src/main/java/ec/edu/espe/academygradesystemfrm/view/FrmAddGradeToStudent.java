@@ -14,7 +14,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author WINDOWS
+ * @author Lainez Ricardo JEZHE SEA - ESPE
  */
 public class FrmAddGradeToStudent extends javax.swing.JFrame {
 

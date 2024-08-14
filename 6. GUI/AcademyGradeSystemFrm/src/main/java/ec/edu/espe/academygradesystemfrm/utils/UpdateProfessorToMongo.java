@@ -10,7 +10,7 @@ import com.mongodb.client.MongoDatabase;
 
 /**
  *
- * @author WINDOWS
+ * @author Lainez Ricardo JEZHE SEA - ESPE
  */
 public class UpdateProfessorToMongo {
     private MongoClient mongoClient;

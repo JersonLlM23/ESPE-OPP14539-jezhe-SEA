@@ -12,7 +12,7 @@ import java.awt.*;
 
 /**
  *
- * @author WINDOWS
+ * @author Lainez Ricardo JEZHE SEA - ESPE
  */
 public class FrmCreateStudent extends javax.swing.JFrame {
 

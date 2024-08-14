@@ -125,11 +125,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblImage">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\JERSON\Documents\NetBeansProjects\AcademyGradeSystemFrm\src\resources\AcademyGradeSystem Img1.jpeg"/>
-            </Property>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>

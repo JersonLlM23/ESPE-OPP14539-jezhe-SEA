@@ -14,7 +14,7 @@ import org.bson.conversions.Bson;
 
 /**
  *
- * @author WINDOWS
+ * @author Lainez Ricardo JEZHE SEA - ESPE
  */
 public class UpdateProfessorController {
     private MongoDatabase database;
