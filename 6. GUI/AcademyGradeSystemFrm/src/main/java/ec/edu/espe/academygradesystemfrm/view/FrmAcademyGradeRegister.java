@@ -4,6 +4,9 @@
  */
 package ec.edu.espe.academygradesystemfrm.view;
 
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author Lainez Ricardo JEZHE SEA - ESPE
@@ -26,6 +29,7 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuAcademyGradeRegister = new javax.swing.JMenu();
         itmLogout = new javax.swing.JMenuItem();
@@ -53,6 +57,9 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
+        setBackground(new java.awt.Color(204, 255, 255));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\IAEN\\Documents\\Git\\ESPE-OPP14539-jezhe-SEA\\6. GUI\\AcademyGradeSystemFrm\\src\\main\\java\\ec\\edu\\espe\\academygradesystemfrm\\view\\resources\\AcademyGradeSystem Img1.jpeg")); // NOI18N
 
         mnuAcademyGradeRegister.setText("HOME");
 
@@ -213,15 +220,17 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addComponent(jLabel1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 480, Short.MAX_VALUE)
+            .addComponent(jLabel1)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+     
 
     private void itmCreateStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmCreateStudentActionPerformed
         FrmCreateStudent frmCreateStudent = new FrmCreateStudent();
@@ -376,6 +385,7 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
     private javax.swing.JMenuItem itmUpdateProfessor;
     private javax.swing.JMenuItem itmUpdateStudent;
     private javax.swing.JMenuItem itmUpdateStudentGrade;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
