@@ -38,6 +38,8 @@ ec\edu\espe\academygradesystemfrm\view\FrmAbout$1.class
 ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeRegister$9.class
 ec\edu\espe\academygradesystemfrm\view\FrmReadProfessor$4.class
 ec\edu\espe\academygradesystemfrm\model\AddGrades.class
+ec\edu\espe\academygradesystemfrm\controller\StudentValidator.class
+ec\edu\espe\academygradesystemfrm\controller\AgeCalculator.class
 ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeRegister$11.class
 ec\edu\espe\academygradesystemfrm\view\FrmLogIn$6.class
 ec\edu\espe\academygradesystemfrm\view\FrmReadStudent$2.class
@@ -81,6 +83,7 @@ ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeRegister$6.class
 ec\edu\espe\academygradesystemfrm\view\FrmDeleteProfessor.class
 ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeSystemSplash$2.class
 ec\edu\espe\academygradesystemfrm\view\FrmLogIn$8.class
+ec\edu\espe\academygradesystemfrm\view\FrmAddGradeToStudent$5.class
 ec\edu\espe\academygradesystemfrm\view\FrmAddGradeToStudent$2.class
 ec\edu\espe\academygradesystemfrm\view\FrmReadStudent$5.class
 ec\edu\espe\academygradesystemfrm\view\FrmCreateProfessor$5.class

@@ -31,8 +31,10 @@ C:\Users\JERSON\Documents\GitHub\ESPE-OPP14539-jezhe-SEA\6. GUI\AcademyGradeSyst
 C:\Users\JERSON\Documents\GitHub\ESPE-OPP14539-jezhe-SEA\6. GUI\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeSystemSplash.java
 C:\Users\JERSON\Documents\GitHub\ESPE-OPP14539-jezhe-SEA\6. GUI\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\utils\UpdateGradeToMongo.java
 C:\Users\JERSON\Documents\GitHub\ESPE-OPP14539-jezhe-SEA\6. GUI\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\view\FrmReadProfessor.java
+C:\Users\JERSON\Documents\GitHub\ESPE-OPP14539-jezhe-SEA\6. GUI\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\controller\StudentValidator.java
 C:\Users\JERSON\Documents\GitHub\ESPE-OPP14539-jezhe-SEA\6. GUI\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\controller\UpdateGradeController.java
 C:\Users\JERSON\Documents\GitHub\ESPE-OPP14539-jezhe-SEA\6. GUI\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\model\AddGrades.java
+C:\Users\JERSON\Documents\GitHub\ESPE-OPP14539-jezhe-SEA\6. GUI\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\controller\AgeCalculator.java
 C:\Users\JERSON\Documents\GitHub\ESPE-OPP14539-jezhe-SEA\6. GUI\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\utils\GradeToMongo.java
 C:\Users\JERSON\Documents\GitHub\ESPE-OPP14539-jezhe-SEA\6. GUI\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\controller\UpdateStudentController.java
 C:\Users\JERSON\Documents\GitHub\ESPE-OPP14539-jezhe-SEA\6. GUI\AcademyGradeSystemFrm\src\main\java\ec\edu\espe\academygradesystemfrm\model\CreateProfessor.java

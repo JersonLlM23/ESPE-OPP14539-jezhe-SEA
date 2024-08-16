@@ -23,9 +23,14 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
                   <Component id="jPanel2" alignment="1" max="32767" attributes="0"/>
                   <Component id="jPanel1" alignment="1" max="32767" attributes="0"/>
                   <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
@@ -38,7 +43,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
               <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
@@ -53,29 +60,15 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <EmptySpace min="0" pref="16" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="ACERCA DE"/>
-          </Properties>
-        </Component>
-      </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="jPanel2">
 
@@ -110,7 +103,7 @@
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="Academy Grade System&#xa;&#xa;Academy Grade System es una herramienta dise&#xf1;ada para facilitar a los profesores la gesti&#xf3;n de notas y la generaci&#xf3;n de reportes &#xa;de sus estudiantes. Nuestra misi&#xf3;n es proporcionar una soluci&#xf3;n eficiente y confiable que permita a los docentes centrarse en &#xa;lo m&#xe1;s importante: la educaci&#xf3;n.&#xa;&#xa;El desarrollo de Academy Grade System ha sido posible gracias a la colaboraci&#xf3;n del equipo de trabajo conformado por:&#xa;Jerson Llumiquinga&#xa;Ricardo Lainez&#xa;Zaith Manang&#xf3;n&#xa;Heidy Mera&#xa;Nuestro equipo ha trabajado con dedicaci&#xf3;n para asegurar que esta herramienta cumpla con las necesidades de los profesores &#xa;y que ofrezca una experiencia de usuario intuitiva y eficaz.&#xa;&#xa;Para el desarrollo de Academy Grade System, hemos utilizado las siguientes tecnolog&#xed;as:&#xa;Lenguaje de Programaci&#xf3;n: Java, que nos ha permitido crear una aplicaci&#xf3;n robusta y escalable.&#xa;Base de Datos: MongoDB, para garantizar la persistencia de los datos y permitir el almacenamiento seguro y eficiente de la &#xa;informaci&#xf3;n de los estudiantes.&#xa;Agradecimientos&#xa;&#xa;Queremos expresar nuestro agradecimiento especial a Edison Lascano, nuestro profesor de Programaci&#xf3;n Orientada a Objetos (POO), &#xa;por su gu&#xed;a y apoyo durante todo el proceso de desarrollo de esta aplicaci&#xf3;n."/>
+                <Property name="text" type="java.lang.String" value="Academy Grade System&#xa;&#xa;Academy Grade System es una herramienta dise&#xf1;ada para facilitar a los profesores la gesti&#xf3;n de notas y la generaci&#xf3;n de reportes &#xa;de sus estudiantes. Nuestra misi&#xf3;n es proporcionar una soluci&#xf3;n eficiente y confiable que permita a los docentes centrarse en &#xa;lo m&#xe1;s importante: la educaci&#xf3;n.&#xa;&#xa;El desarrollo de Academy Grade System ha sido posible gracias a la colaboraci&#xf3;n del equipo de trabajo conformado por:&#xa;Jerson Llumiquinga M&#xa;Ricardo Lainez&#xa;Zaith Manang&#xf3;n&#xa;Heidy Mera&#xa;Nuestro equipo ha trabajado con dedicaci&#xf3;n para asegurar que esta herramienta cumpla con las necesidades de los profesores &#xa;y que ofrezca una experiencia de usuario intuitiva y eficaz.&#xa;&#xa;Para el desarrollo de Academy Grade System, hemos utilizado las siguientes tecnolog&#xed;as:&#xa;Lenguaje de Programaci&#xf3;n: Java, que nos ha permitido crear una aplicaci&#xf3;n robusta y escalable.&#xa;Base de Datos: MongoDB, para garantizar la persistencia de los datos y permitir el almacenamiento seguro y eficiente de la &#xa;informaci&#xf3;n de los estudiantes.&#xa;Agradecimientos&#xa;&#xa;Queremos expresar nuestro agradecimiento especial a Edison Lascano, nuestro profesor de Programaci&#xf3;n Orientada a Objetos (POO), &#xa;por su gu&#xed;a y apoyo durante todo el proceso de desarrollo de esta aplicaci&#xf3;n."/>
               </Properties>
             </Component>
           </SubComponents>
@@ -149,5 +142,13 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Sitka Small" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="ACERCA DE"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>

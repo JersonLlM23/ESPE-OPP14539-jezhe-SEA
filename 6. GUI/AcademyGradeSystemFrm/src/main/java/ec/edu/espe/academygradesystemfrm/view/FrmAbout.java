@@ -27,36 +27,29 @@ public class FrmAbout extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txaAbout = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel1.setText("ACERCA DE");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1))
+            .addGap(0, 16, Short.MAX_VALUE)
         );
 
         txaAbout.setColumns(20);
         txaAbout.setRows(5);
-        txaAbout.setText("Academy Grade System\n\nAcademy Grade System es una herramienta diseñada para facilitar a los profesores la gestión de notas y la generación de reportes \nde sus estudiantes. Nuestra misión es proporcionar una solución eficiente y confiable que permita a los docentes centrarse en \nlo más importante: la educación.\n\nEl desarrollo de Academy Grade System ha sido posible gracias a la colaboración del equipo de trabajo conformado por:\nJerson Llumiquinga\nRicardo Lainez\nZaith Manangón\nHeidy Mera\nNuestro equipo ha trabajado con dedicación para asegurar que esta herramienta cumpla con las necesidades de los profesores \ny que ofrezca una experiencia de usuario intuitiva y eficaz.\n\nPara el desarrollo de Academy Grade System, hemos utilizado las siguientes tecnologías:\nLenguaje de Programación: Java, que nos ha permitido crear una aplicación robusta y escalable.\nBase de Datos: MongoDB, para garantizar la persistencia de los datos y permitir el almacenamiento seguro y eficiente de la \ninformación de los estudiantes.\nAgradecimientos\n\nQueremos expresar nuestro agradecimiento especial a Edison Lascano, nuestro profesor de Programación Orientada a Objetos (POO), \npor su guía y apoyo durante todo el proceso de desarrollo de esta aplicación.");
+        txaAbout.setText("Academy Grade System\n\nAcademy Grade System es una herramienta diseñada para facilitar a los profesores la gestión de notas y la generación de reportes \nde sus estudiantes. Nuestra misión es proporcionar una solución eficiente y confiable que permita a los docentes centrarse en \nlo más importante: la educación.\n\nEl desarrollo de Academy Grade System ha sido posible gracias a la colaboración del equipo de trabajo conformado por:\nJerson Llumiquinga M\nRicardo Lainez\nZaith Manangón\nHeidy Mera\nNuestro equipo ha trabajado con dedicación para asegurar que esta herramienta cumpla con las necesidades de los profesores \ny que ofrezca una experiencia de usuario intuitiva y eficaz.\n\nPara el desarrollo de Academy Grade System, hemos utilizado las siguientes tecnologías:\nLenguaje de Programación: Java, que nos ha permitido crear una aplicación robusta y escalable.\nBase de Datos: MongoDB, para garantizar la persistencia de los datos y permitir el almacenamiento seguro y eficiente de la \ninformación de los estudiantes.\nAgradecimientos\n\nQueremos expresar nuestro agradecimiento especial a Edison Lascano, nuestro profesor de Programación Orientada a Objetos (POO), \npor su guía y apoyo durante todo el proceso de desarrollo de esta aplicación.");
         jScrollPane1.setViewportView(txaAbout);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -98,6 +91,9 @@ public class FrmAbout extends javax.swing.JFrame {
                 .addGap(0, 16, Short.MAX_VALUE))
         );
 
+        jLabel1.setFont(new java.awt.Font("Sitka Small", 1, 14)); // NOI18N
+        jLabel1.setText("ACERCA DE");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -105,6 +101,10 @@ public class FrmAbout extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -114,7 +114,9 @@ public class FrmAbout extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(11, 11, 11)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
