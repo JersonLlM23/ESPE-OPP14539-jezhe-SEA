@@ -63,6 +63,12 @@ public class FrmCreateStudent extends javax.swing.JFrame {
             }
         });
 
+        txtAge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAgeActionPerformed(evt);
+            }
+        });
+
         btnSaveStudent.setText("guardar");
         btnSaveStudent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -211,7 +217,7 @@ public class FrmCreateStudent extends javax.swing.JFrame {
             String name;
             int id;            
             String degree;
-            String age;
+            int age;
             
             String idTextStudent = txtId.getText();
             // Verificación de longitud del ID
@@ -232,7 +238,8 @@ public class FrmCreateStudent extends javax.swing.JFrame {
             return;
         }            
             degree = txtDegree.getText();
-            age = txtAge.getText();       
+            age = Integer.parseInt(txtAge.getText());       
+            
             
             student = new CreateStudent(id, name, degree, age);            
             StudentToMongo.uploadSudentData(student);            
@@ -253,6 +260,10 @@ public class FrmCreateStudent extends javax.swing.JFrame {
     private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIdActionPerformed
+
+    private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAgeActionPerformed
 
     /**
      * @param args the command line arguments

@@ -8,11 +8,19 @@ package ec.edu.espe.academygradesystemfrm.model;
  *
  * @author Lainez Ricardo JEZHE SEA - ESPE
  */
+
 public class CreateStudent {
     private int id;
     private String name;
     private String degree;
-    private String age;
+    private int age;
+    
+    public CreateStudent(int id, String name, String degree, int age) {
+        this.id = id;
+        this.name = name;
+        this.degree = degree;
+        this.age = age;
+    }
 
     public int getId() {
         return id;
@@ -38,11 +46,11 @@ public class CreateStudent {
         this.degree = degree;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
@@ -50,15 +58,4 @@ public class CreateStudent {
     public String toString() {
         return "CreateStudent{" + "id=" + id + ", name=" + name + ", degree=" + degree + ", age=" + age + '}';
     }
-
-    public CreateStudent(int id, String name, String degree, String age) {
-        this.id = id;
-        this.name = name;
-        this.degree = degree;
-        this.age = age;
-    }
-    
-    
-    
-    
 }

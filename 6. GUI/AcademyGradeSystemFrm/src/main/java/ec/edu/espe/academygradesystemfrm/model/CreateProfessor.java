@@ -10,12 +10,19 @@ import org.bson.Document;
  *
  * @author Lainez Ricardo JEZHE SEA - ESPE
  */
+
 public class CreateProfessor {
     private int id;
     private String name;
     private String department;
+    
+    public CreateProfessor(int id, String name, String department) {
+        this.id = id;
+        this.name = name;
+        this.department = department;
+    }
 
-    public int getId() {
+   public int getId() {
         return id;
     }
 
@@ -44,14 +51,8 @@ public class CreateProfessor {
         return "CreateProfessor{" + "id=" + id + ", name=" + name + ", department=" + department + '}';
     }
 
-    public CreateProfessor(int id, String name, String deparment) {
-        this.id = id;
-        this.name = name;
-        this.department = deparment;
-    }
     
     public Document toDocument(){
         return new Document("id", id).append("Nombre", name).append("Departamento", department);
     }
-
 }

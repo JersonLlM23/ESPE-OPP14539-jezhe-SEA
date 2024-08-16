@@ -20,6 +20,7 @@ import org.bson.Document;
  *
  * @author Lainez Ricardo JEZHE SEA - ESPE
  */
+
 public class StudentToMongo {
     private static MongoClient createMongoClient() {
     String connectionString = "mongodb+srv://jezhe:jezheoop@cluster0.6vuzzwl.mongodb.net/";
@@ -27,7 +28,6 @@ public class StudentToMongo {
         
         MongoClientSettings settings = MongoClientSettings.builder()
                 .applyConnectionString(new ConnectionString(connectionString)).serverApi(serverApi).build();
-     
         return MongoClients.create(settings);
     }
     public static CreateStudent getStudentById(int studentId) {
@@ -43,7 +43,7 @@ public class StudentToMongo {
         if (studentDocument != null) {
             String name = studentDocument.getString("nombre");
             String degree = studentDocument.getString("grado");
-            String age = studentDocument.getString("edad");
+            int age = studentDocument.getInteger("edad");
             
             student = new CreateStudent(studentId, name, degree, age);
         }

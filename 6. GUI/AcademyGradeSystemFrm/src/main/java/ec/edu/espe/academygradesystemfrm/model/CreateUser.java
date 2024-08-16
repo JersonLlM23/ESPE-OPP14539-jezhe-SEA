@@ -68,6 +68,8 @@ public class CreateUser {
         return "CreateUser{" + "id=" + id + ", username=" + username + ", password=" + password + '}';
     }
     public Document toDocument(){
-        return new Document("id", id).append("username", username).append("Password", password);
+        return new Document("id", id)
+                .append("username", username)
+                .append("Password", password);
     }
 }
