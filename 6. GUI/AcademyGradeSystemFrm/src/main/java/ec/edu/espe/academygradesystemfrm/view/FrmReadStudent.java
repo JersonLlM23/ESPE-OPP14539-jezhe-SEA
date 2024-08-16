@@ -230,7 +230,7 @@ public class FrmReadStudent extends javax.swing.JFrame {
 
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
-        final JDialog loadingDialog = new JDialog(this, "Cargando", true);
+    final JDialog loadingDialog = new JDialog(this, "Cargando", true);
     JLabel loadingLabel = new JLabel("Buscando la información del estudiante...");
     loadingDialog.add(loadingLabel);
     loadingDialog.setSize(300, 100);

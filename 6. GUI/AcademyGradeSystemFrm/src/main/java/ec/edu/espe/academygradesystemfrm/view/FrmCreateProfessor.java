@@ -1,9 +1,9 @@
 package ec.edu.espe.academygradesystemfrm.view;
 
+import ec.edu.espe.academygradesystemfrm.controller.ProfessorValidator;
 import ec.edu.espe.academygradesystemfrm.model.CreateProfessor;
 import ec.edu.espe.academygradesystemfrm.utils.ProfessorToMongo;
 import javax.swing.JOptionPane;
-import java.awt.*;
 
 /**
  *
@@ -211,63 +211,40 @@ public class FrmCreateProfessor extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAcademyGradeRegisterActionPerformed
 
     private void btnCrearProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearProfesorActionPerformed
-        try {
-        CreateProfessor professor;
-        
-        String name;
-        int id;
-        String deparment;
-
+    try {
         String idTextProfessor = txtId.getText();
-        // Verificación de longitud del ID
-        if (idTextProfessor.length() > 10) {
-            JOptionPane.showMessageDialog(this, "El ID no debe tener más de 10 dígitos.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
-            txtId.setForeground(Color.RED);  // Cambiar el color del texto a rojo
-            txtId.requestFocus();  // Regresar el foco al campo de texto
-            return;
-            }
+        String name = txtFullNameProfessor.getText();
+        String department = txtDeparment.getText();
 
-        id = Integer.parseInt(idTextProfessor);
-        name = txtFullNameProfessor.getText();
+        // Validar ID
+        if (!ProfessorValidator.validateProfessorId(idTextProfessor, txtId)) return;
+        // Validar si el ID es un número entero
+        if (!ProfessorValidator.validateIdIsInteger(idTextProfessor, txtId)) return;
+        
+        int id = Integer.parseInt(idTextProfessor);
+        
+        // Validar Nombre
+        if (!ProfessorValidator.validateProfessorName(name, txtFullNameProfessor)) return;
+        
+        // Crear el objeto CreateProfessor
+        CreateProfessor professor = ProfessorValidator.createProfessor(id, name, department);
 
-        // Validación de que el nombre completo no contenga números
-        if (!name.matches("[a-zA-Z\\s]+")) {
-            JOptionPane.showMessageDialog(this, "El nombre completo solo debe contener letras y espacios.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
-            txtFullNameProfessor.setForeground(Color.RED);  // Cambiar el color del texto a rojo
-            txtFullNameProfessor.requestFocus();  // Regresar el foco al campo de texto
-            return;
-        }
-
-        deparment = txtDeparment.getText();
-        professor = new CreateProfessor(id, name, deparment);
-
+        // Subir datos a MongoDB
         ProfessorToMongo.uploadProfessorData(professor);
 
+        // Mostrar mensaje de éxito
         JOptionPane.showMessageDialog(this, "Profesor registrado exitosamente");
-        txtId.setForeground(Color.BLACK);  // Restaurar el color del texto a negro
-        txtFullNameProfessor.setForeground(Color.BLACK);  // Restaurar el color del texto a negro
+        txtId.setForeground(java.awt.Color.BLACK);
+        txtFullNameProfessor.setForeground(java.awt.Color.BLACK);
 
-    } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(this, "El ID debe ser un número entero.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
-        txtId.setForeground(Color.RED);  // Cambiar el color del texto a rojo
-        txtId.setText("");
-        txtId.requestFocus();  // Regresar el foco al campo de texto
     } catch (Exception e) {
         JOptionPane.showMessageDialog(this, "Error al registrar datos del profesor: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
     }
     }//GEN-LAST:event_btnCrearProfesorActionPerformed
 
     private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
-        String idTextProfessor = txtId.getText();
-        try {
-            int idProfessor = Integer.parseInt(idTextProfessor);
-            txtId.setForeground(Color.BLACK);
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "El ID debe ser un número entero.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
-            txtId.setForeground(Color.RED);
-            txtId.setText("");
-            txtId.requestFocus();
-        }
+         String idTextProfessor = txtId.getText();
+         ProfessorValidator.validateIdIsInteger(idTextProfessor, txtId);
     }//GEN-LAST:event_txtIdActionPerformed
 
     private void txtFullNameProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFullNameProfessorActionPerformed

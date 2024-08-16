@@ -4,6 +4,8 @@
  */
 package ec.edu.espe.academygradesystemfrm.view;
 
+import ec.edu.espe.academygradesystemfrm.controller.GradeCalculator;
+import ec.edu.espe.academygradesystemfrm.controller.StudentGradeValidator;
 import ec.edu.espe.academygradesystemfrm.utils.GradeToMongo;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -236,54 +238,36 @@ public class FrmAddGradeToStudent extends javax.swing.JFrame {
     private void textFieldStudentIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldStudentIdActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldStudentIdActionPerformed
- private void calcularPromedio() {
-        try {
-            double primerParcial = Double.parseDouble(textFieldPrimerParcial.getText());
-            double segundoParcial = Double.parseDouble(textFieldSegundoParcial.getText());
-            double tercerParcial = Double.parseDouble(textFieldTercerParcial.getText());
-
-            double promedio = (primerParcial + segundoParcial + tercerParcial) / 3;
-
-            lblPromedio.setText(String.format("%.2f", promedio));
-
-            if (promedio >= 14) {
-                lblEstado.setText("Aprobado");
-                lblEstado.setForeground(Color.GREEN);
-            } else {
-                lblEstado.setText("Desaprobado");
-                lblEstado.setForeground(Color.RED);
-            }
-        } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(this, "Por favor, ingrese valores numéricos válidos en los parciales.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
-        }
-    }
-
-   private void guardarCalificaciones() {
-    try {
-        String idTextStudent = textFieldStudentId.getText();
-            // Verificación de longitud del ID
-            if (idTextStudent.length() > 10) {
-                JOptionPane.showMessageDialog(this, "El ID no debe tener más de 10 dígitos.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
-                textFieldStudentId.setForeground(Color.RED);  // Cambiar el color del texto a rojo
-                textFieldStudentId.requestFocus();  // Regresar el foco al campo de texto
-                return;
-            }
+private void calcularPromedio() {
+    if (GradeCalculator.validateGrades(textFieldPrimerParcial, textFieldSegundoParcial, textFieldTercerParcial)) {
         double primerParcial = Double.parseDouble(textFieldPrimerParcial.getText());
         double segundoParcial = Double.parseDouble(textFieldSegundoParcial.getText());
         double tercerParcial = Double.parseDouble(textFieldTercerParcial.getText());
-        String materia = comboBoxMateria.getSelectedItem().toString();
-        double promedio = (primerParcial + segundoParcial + tercerParcial) / 3;
-        String estado = promedio >= 14 ? "Aprobado" : "Desaprobado";
 
-        GradeToMongo.uploadGradeData(idTextStudent, materia, primerParcial, segundoParcial, tercerParcial, promedio, estado);
+        double promedio = GradeCalculator.calculateAverage(primerParcial, segundoParcial, tercerParcial);
+        lblPromedio.setText(String.format("%.2f", promedio));
 
-        JOptionPane.showMessageDialog(this, "Calificaciones guardadas exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-    } catch (NumberFormatException ex) {
-        JOptionPane.showMessageDialog(this, "Por favor, ingrese valores numéricos válidos en los parciales.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
+        GradeCalculator.determineStatus(promedio, lblEstado);
     }
 }
 
+private void guardarCalificaciones() {
+    String idTextStudent = textFieldStudentId.getText();
+    
+    if (!StudentGradeValidator.validateStudentId(idTextStudent, textFieldStudentId)) return;
+    if (!GradeCalculator.validateGrades(textFieldPrimerParcial, textFieldSegundoParcial, textFieldTercerParcial)) return;
 
+    double primerParcial = Double.parseDouble(textFieldPrimerParcial.getText());
+    double segundoParcial = Double.parseDouble(textFieldSegundoParcial.getText());
+    double tercerParcial = Double.parseDouble(textFieldTercerParcial.getText());
+    String materia = StudentGradeValidator.getSelectedSubject(comboBoxMateria);
+    double promedio = GradeCalculator.calculateAverage(primerParcial, segundoParcial, tercerParcial);
+    String estado = GradeCalculator.determineStatus(promedio, lblEstado);
+
+    GradeToMongo.uploadGradeData(idTextStudent, materia, primerParcial, segundoParcial, tercerParcial, promedio, estado);
+
+    JOptionPane.showMessageDialog(this, "Calificaciones guardadas exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+}
     /**
      * @param args the command line arguments
      */
