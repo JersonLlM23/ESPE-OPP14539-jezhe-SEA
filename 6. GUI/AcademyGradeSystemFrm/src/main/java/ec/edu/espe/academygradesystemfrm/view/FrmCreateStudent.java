@@ -8,7 +8,12 @@ import ec.edu.espe.academygradesystemfrm.model.CreateStudent;
 import ec.edu.espe.academygradesystemfrm.utils.StudentToMongo;
 import java.awt.Color;
 import javax.swing.JOptionPane;
+import com.toedter.calendar.JDateChooser;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.awt.*;
+
 
 /**
  *
@@ -36,36 +41,28 @@ public class FrmCreateStudent extends javax.swing.JFrame {
         lblId = new javax.swing.JLabel();
         lblFullName = new javax.swing.JLabel();
         lblDegree = new javax.swing.JLabel();
-        lblAge = new javax.swing.JLabel();
         txtId = new javax.swing.JTextField();
         txtFullName = new javax.swing.JTextField();
         txtDegree = new javax.swing.JTextField();
-        txtAge = new javax.swing.JTextField();
         btnSaveStudent = new javax.swing.JButton();
         btnAcademyGradeRegister = new javax.swing.JButton();
+        dateChooser = new com.toedter.calendar.JDateChooser();
+        lblDegree1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblId.setText("ingrese ID:");
+        lblId.setText("Ingrese el ID:");
 
-        lblFullName.setText("ingrese nombres y apellidos:");
+        lblFullName.setText("Ingrese Nombres y Apellidos:");
 
-        lblDegree.setText("ingrese grado:");
-
-        lblAge.setText("ingrese edad:");
+        lblDegree.setText("Ingrese el grado:");
 
         txtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIdActionPerformed(evt);
-            }
-        });
-
-        txtAge.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAgeActionPerformed(evt);
             }
         });
 
@@ -83,6 +80,8 @@ public class FrmCreateStudent extends javax.swing.JFrame {
             }
         });
 
+        lblDegree1.setText("Ingrese Fecha de Nacimiento:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -90,29 +89,27 @@ public class FrmCreateStudent extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(104, 104, 104)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblAge)
-                                    .addComponent(lblDegree)
-                                    .addComponent(lblId))
-                                .addGap(27, 27, 27))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(lblFullName)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtId, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-                                .addComponent(txtDegree)
-                                .addComponent(txtAge))
-                            .addComponent(txtFullName, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 24, Short.MAX_VALUE))
+                        .addGap(104, 104, 104)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblDegree)
+                            .addComponent(lblId))
+                        .addGap(27, 27, 27))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnSaveStudent)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAcademyGradeRegister)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblDegree1)
+                            .addComponent(lblFullName))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(dateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtId, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                    .addComponent(txtDegree)
+                    .addComponent(txtFullName, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
+                .addGap(68, 68, 68))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnSaveStudent)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnAcademyGradeRegister)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -130,11 +127,11 @@ public class FrmCreateStudent extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblDegree)
                     .addComponent(txtDegree, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblAge)
-                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(dateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblDegree1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAcademyGradeRegister)
                     .addComponent(btnSaveStudent))
@@ -196,7 +193,7 @@ public class FrmCreateStudent extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
@@ -213,7 +210,6 @@ public class FrmCreateStudent extends javax.swing.JFrame {
     private void btnSaveStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveStudentActionPerformed
         try{
             CreateStudent student;            
-
             String name;
             int id;            
             String degree;
@@ -231,16 +227,27 @@ public class FrmCreateStudent extends javax.swing.JFrame {
             id = Integer.parseInt(txtId.getText());
             name = txtFullName.getText();
         // Validación de que el nombre completo no contenga números
-        if (!name.matches("[a-zA-Z\\s]+")) {
+            if (!name.matches("[a-zA-Z\\s]+")) {
             JOptionPane.showMessageDialog(this, "El nombre completo solo debe contener letras y espacios.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
             txtFullName.setForeground(Color.RED);  // Cambiar el color del texto a rojo
             txtFullName.requestFocus();  // Regresar el foco al campo de texto
             return;
-        }            
+        }   
+            java.util.Date birthDate = dateChooser.getDate();
+            if (birthDate == null){
+                JOptionPane.showMessageDialog(this,"Por favor, seleccione una fecha de nacimiento", "Error de entrada", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            Calendar birthCalendar = Calendar.getInstance();
+            birthCalendar.setTime(birthDate);
+            Calendar today = Calendar.getInstance();
+            
+            age = today.get(Calendar.YEAR) - birthCalendar.get(Calendar.YEAR);
+            if (today.get(Calendar.DAY_OF_YEAR) < birthCalendar.get(Calendar.DAY_OF_YEAR)){
+                age--;
+            }
+            
             degree = txtDegree.getText();
-            age = Integer.parseInt(txtAge.getText());       
-            
-            
             student = new CreateStudent(id, name, degree, age);            
             StudentToMongo.uploadSudentData(student);            
             JOptionPane.showMessageDialog(this, "¡Estudiante registrado exitosamente!");
@@ -260,10 +267,6 @@ public class FrmCreateStudent extends javax.swing.JFrame {
     private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIdActionPerformed
-
-    private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAgeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -303,15 +306,15 @@ public class FrmCreateStudent extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAcademyGradeRegister;
     private javax.swing.JButton btnSaveStudent;
+    private com.toedter.calendar.JDateChooser dateChooser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblDegree;
+    private javax.swing.JLabel lblDegree1;
     private javax.swing.JLabel lblFullName;
     private javax.swing.JLabel lblId;
-    private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtDegree;
     private javax.swing.JTextField txtFullName;
     private javax.swing.JTextField txtId;
