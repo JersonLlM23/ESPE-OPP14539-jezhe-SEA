@@ -1,6 +1,6 @@
 package ec.edu.espe.academygradesystemfrm.view;
 
-import ec.edu.espe.academygradesystemfrm.controller.ProfessorValidator;
+import ec.edu.espe.academygradesystemfrm.controller.ValidateData;
 import ec.edu.espe.academygradesystemfrm.model.CreateProfessor;
 import ec.edu.espe.academygradesystemfrm.utils.ProfessorToMongo;
 import javax.swing.JOptionPane;
@@ -212,39 +212,36 @@ public class FrmCreateProfessor extends javax.swing.JFrame {
 
     private void btnCrearProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearProfesorActionPerformed
     try {
-        String idTextProfessor = txtId.getText();
-        String name = txtFullNameProfessor.getText();
-        String department = txtDeparment.getText();
+            String idTextProfessor = txtId.getText();
+            String name = txtFullNameProfessor.getText();
+            String department = txtDeparment.getText();
 
-        // Validar ID
-        if (!ProfessorValidator.validateProfessorId(idTextProfessor, txtId)) return;
-        // Validar si el ID es un número entero
-        if (!ProfessorValidator.validateIdIsInteger(idTextProfessor, txtId)) return;
-        
-        int id = Integer.parseInt(idTextProfessor);
-        
-        // Validar Nombre
-        if (!ProfessorValidator.validateProfessorName(name, txtFullNameProfessor)) return;
-        
-        // Crear el objeto CreateProfessor
-        CreateProfessor professor = ProfessorValidator.createProfessor(id, name, department);
+            // Llamadas a métodos de validación en la clase Validator
+            if (!ValidateData.validateIdLength(idTextProfessor, txtId)) return;
+            if (!ValidateData.validateIdIsInteger(idTextProfessor, txtId)) return;
+            if (!ValidateData.validateName(name, txtFullNameProfessor)) return;
 
-        // Subir datos a MongoDB
-        ProfessorToMongo.uploadProfessorData(professor);
+            int id = Integer.parseInt(idTextProfessor);
 
-        // Mostrar mensaje de éxito
-        JOptionPane.showMessageDialog(this, "Profesor registrado exitosamente");
-        txtId.setForeground(java.awt.Color.BLACK);
-        txtFullNameProfessor.setForeground(java.awt.Color.BLACK);
+            // Crear el objeto CreateProfessor
+            CreateProfessor professor = new CreateProfessor(id, name, department);
 
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Error al registrar datos del profesor: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-    }
+            // Subir datos a MongoDB
+            ProfessorToMongo.uploadProfessorData(professor);
+
+            // Mostrar mensaje de éxito
+            JOptionPane.showMessageDialog(this, "Profesor registrado exitosamente");
+            txtId.setForeground(java.awt.Color.BLACK);
+            txtFullNameProfessor.setForeground(java.awt.Color.BLACK);
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error al registrar datos del profesor: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_btnCrearProfesorActionPerformed
 
     private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
          String idTextProfessor = txtId.getText();
-         ProfessorValidator.validateIdIsInteger(idTextProfessor, txtId);
+         ValidateData.validateIdIsInteger(idTextProfessor, txtId);
     }//GEN-LAST:event_txtIdActionPerformed
 
     private void txtFullNameProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFullNameProfessorActionPerformed

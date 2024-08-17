@@ -8,8 +8,7 @@ import ec.edu.espe.academygradesystemfrm.model.CreateStudent;
 import ec.edu.espe.academygradesystemfrm.utils.StudentToMongo;
 import java.awt.Color;
 import javax.swing.JOptionPane;
-import ec.edu.espe.academygradesystemfrm.controller.AgeCalculator;
-import ec.edu.espe.academygradesystemfrm.controller.StudentValidator;
+import ec.edu.espe.academygradesystemfrm.controller.*;
 
 
 /**
@@ -215,12 +214,12 @@ public class FrmCreateStudent extends javax.swing.JFrame {
         java.util.Date birthDate = dateChooser.getDate();
 
         // Validaciones
-        if (!StudentValidator.validateId(idText, txtId)) return;
-        if (!StudentValidator.validateName(name, txtFullName)) return;
-        if (!StudentValidator.validateBirthDate(birthDate)) return;
+            if (!ValidateData.validateIdLength(idText, txtId)) return;
+            if (!ValidateData.validateIdIsInteger(idText, txtId)) return;
+            if (!ValidateData.validateName(name, txtFullName)) return;
 
-        int id = Integer.parseInt(idText);
-        int age = AgeCalculator.calculateAge(birthDate);
+            int id = Integer.parseInt(idText);
+            int age = AgeCalculator.calculateAge(birthDate);
 
         // Crear y guardar el estudiante
         CreateStudent student = new CreateStudent(id, name, degree, age);
@@ -230,14 +229,9 @@ public class FrmCreateStudent extends javax.swing.JFrame {
         txtId.setForeground(Color.BLACK);
         txtFullName.setForeground(Color.BLACK);
 
-    } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(this, "El ID debe ser un número entero.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
-        txtId.setForeground(Color.RED);
-        txtId.setText("");
-        txtId.requestFocus();
     } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Error al registrar datos del estudiante: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-    }
+            JOptionPane.showMessageDialog(this, "Error al registrar datos del estudiante: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_btnSaveStudentActionPerformed
 
     private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed

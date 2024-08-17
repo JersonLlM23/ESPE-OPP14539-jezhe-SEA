@@ -1,17 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.edu.espe.academygradesystemfrm.controller;
 
 import java.awt.Color;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+
 /**
  *
  * @author Jerson Llumiquinga M. - TEAM: JEZHEA S.E.A
  */
+
 public class StudentGradeValidator {
     public static boolean validateStudentId(String idText, JTextField idField) {
         if (idText.length() > 10) {

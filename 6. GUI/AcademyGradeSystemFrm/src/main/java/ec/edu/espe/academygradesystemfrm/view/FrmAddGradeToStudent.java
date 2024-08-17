@@ -243,20 +243,15 @@ private void calcularPromedio() {
         double primerParcial = Double.parseDouble(textFieldPrimerParcial.getText());
         double segundoParcial = Double.parseDouble(textFieldSegundoParcial.getText());
         double tercerParcial = Double.parseDouble(textFieldTercerParcial.getText());
-
         double promedio = GradeCalculator.calculateAverage(primerParcial, segundoParcial, tercerParcial);
         lblPromedio.setText(String.format("%.2f", promedio));
-
         GradeCalculator.determineStatus(promedio, lblEstado);
     }
 }
-
 private void guardarCalificaciones() {
     String idTextStudent = textFieldStudentId.getText();
-    
     if (!StudentGradeValidator.validateStudentId(idTextStudent, textFieldStudentId)) return;
     if (!GradeCalculator.validateGrades(textFieldPrimerParcial, textFieldSegundoParcial, textFieldTercerParcial)) return;
-
     double primerParcial = Double.parseDouble(textFieldPrimerParcial.getText());
     double segundoParcial = Double.parseDouble(textFieldSegundoParcial.getText());
     double tercerParcial = Double.parseDouble(textFieldTercerParcial.getText());

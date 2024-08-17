@@ -38,7 +38,6 @@ ec\edu\espe\academygradesystemfrm\view\FrmAbout$1.class
 ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeRegister$9.class
 ec\edu\espe\academygradesystemfrm\view\FrmReadProfessor$4.class
 ec\edu\espe\academygradesystemfrm\model\AddGrades.class
-ec\edu\espe\academygradesystemfrm\controller\StudentValidator.class
 ec\edu\espe\academygradesystemfrm\controller\AgeCalculator.class
 ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeRegister$11.class
 ec\edu\espe\academygradesystemfrm\view\FrmLogIn$6.class
@@ -50,10 +49,12 @@ ec\edu\espe\academygradesystemfrm\view\FrmReadStudent.class
 ec\edu\espe\academygradesystemfrm\controller\UpdateStudentController.class
 ec\edu\espe\academygradesystemfrm\view\FrmReadStudent$3.class
 ec\edu\espe\academygradesystemfrm\utils\UpdateGradeToMongo.class
+ec\edu\espe\academygradesystemfrm\controller\GradeCalculator.class
 ec\edu\espe\academygradesystemfrm\utils\StudentToMongo.class
 ec\edu\espe\academygradesystemfrm\view\FrmAbout$2.class
 ec\edu\espe\academygradesystemfrm\view\FrmDeleteProfessor$1.class
 ec\edu\espe\academygradesystemfrm\view\FrmReadProfessor$3.class
+ec\edu\espe\academygradesystemfrm\controller\ValidateData.class
 ec\edu\espe\academygradesystemfrm\view\FrmCreateProfessor.class
 ec\edu\espe\academygradesystemfrm\utils\DeleteUserToMongo.class
 ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeRegister$4.class
@@ -100,6 +101,7 @@ ec\edu\espe\academygradesystemfrm\view\FrmCreateStudent$3.class
 ec\edu\espe\academygradesystemfrm\view\FrmGenerateStudentReport$1.class
 ec\edu\espe\academygradesystemfrm\model\CreateStudent.class
 ec\edu\espe\academygradesystemfrm\view\FrmUpdateProfessor.class
+ec\edu\espe\academygradesystemfrm\controller\StudentGradeValidator.class
 ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeSystemSplash.class
 ec\edu\espe\academygradesystemfrm\view\FrmAddGradeToStudent$4.class
 ec\edu\espe\academygradesystemfrm\utils\ProfessorToMongo.class
