@@ -13,8 +13,7 @@ public class DeleteProfessorController {
     private DeleteProfessorToMongo mongoDBConnection;
     
     public DeleteProfessorController(){
-        mongoDBConnection = new DeleteProfessorToMongo();
-        
+        mongoDBConnection = new DeleteProfessorToMongo();        
     }
     
     public void deleteProfessor(int id){
@@ -22,6 +21,5 @@ public class DeleteProfessorController {
         collection.deleteOne(Filters.eq("id", id));
         System.out.println("El profesor con " + id + " ha sido eliminado. ");
         mongoDBConnection.closeConnection();
-    }
-    
+    }    
 }

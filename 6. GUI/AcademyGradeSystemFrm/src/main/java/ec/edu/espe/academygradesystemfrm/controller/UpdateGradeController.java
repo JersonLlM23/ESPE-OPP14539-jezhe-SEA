@@ -34,7 +34,6 @@ public class UpdateGradeController {
                 Updates.set("tercerParcial", deparment),
                 Updates.set("promedio", name), 
                 Updates.set("estado", deparment));
-        collection.updateOne(filter,updates);
-        
+        collection.updateOne(filter,updates);        
     }
 }

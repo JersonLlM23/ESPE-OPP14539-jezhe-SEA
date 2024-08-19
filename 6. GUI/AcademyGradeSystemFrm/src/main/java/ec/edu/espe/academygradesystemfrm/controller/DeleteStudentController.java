@@ -24,6 +24,5 @@ public class DeleteStudentController {
         collection.deleteOne(Filters.eq("id", id));
         System.out.println("estudiante con " + id + "ha sido eliminado");
         mongoDBConnection.closeConnection();
-    }
-    
+    }   
 }

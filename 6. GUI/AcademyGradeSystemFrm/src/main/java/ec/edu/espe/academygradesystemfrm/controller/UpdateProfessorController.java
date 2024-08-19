@@ -30,8 +30,6 @@ public class UpdateProfessorController {
         Bson updates = Updates.combine(
                 Updates.set("Nombre", name), 
                 Updates.set("Departamento", deparment));
-        collection.updateOne(filter,updates);
-        
-    }
-    
+        collection.updateOne(filter,updates);       
+    }    
 }
