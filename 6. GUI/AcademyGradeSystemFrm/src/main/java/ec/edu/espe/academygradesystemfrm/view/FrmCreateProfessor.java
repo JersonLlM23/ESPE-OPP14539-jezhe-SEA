@@ -212,33 +212,55 @@ public class FrmCreateProfessor extends javax.swing.JFrame {
 
     private void btnCrearProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearProfesorActionPerformed
     try {
-            String idTextProfessor = txtId.getText();
-            String name = txtFullNameProfessor.getText();
-            String department = txtDeparment.getText();
+        if (!validateFields()) return;
 
-            // Llamadas a métodos de validación en la clase Validator
-            if (!ValidateData.validateIdLength(idTextProfessor, txtId)) return;
-            if (!ValidateData.validateIdIsInteger(idTextProfessor, txtId)) return;
-            if (!ValidateData.validateName(name, txtFullNameProfessor)) return;
+        int id = Integer.parseInt(txtId.getText());
+        String name = txtFullNameProfessor.getText();
+        String department = txtDeparment.getText();
 
-            int id = Integer.parseInt(idTextProfessor);
+        CreateProfessor professor = createProfessor(id, name, department);
+        saveProfessorToMongo(professor);
 
-            // Crear el objeto CreateProfessor
-            CreateProfessor professor = new CreateProfessor(id, name, department);
+        showSuccessMessage("Professor successfully registered");
+        resetTextColors();
 
-            // Subir datos a MongoDB
-            ProfessorToMongo.uploadProfessorData(professor);
-
-            // Mostrar mensaje de éxito
-            JOptionPane.showMessageDialog(this, "Profesor registrado exitosamente");
-            txtId.setForeground(java.awt.Color.BLACK);
-            txtFullNameProfessor.setForeground(java.awt.Color.BLACK);
-
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error al registrar datos del profesor: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-        }
+    } catch (Exception e) {
+        showErrorMessage("Error registering professor data: " + e.getMessage());
+    }
     }//GEN-LAST:event_btnCrearProfesorActionPerformed
 
+    private boolean validateFields() {
+    String idTextProfessor = txtId.getText();
+    String name = txtFullNameProfessor.getText();
+
+    if (!ValidateData.validateIdLength(idTextProfessor, txtId)) return false;
+    if (!ValidateData.validateIdIsInteger(idTextProfessor, txtId)) return false;
+    if (!ValidateData.validateName(name, txtFullNameProfessor)) return false;
+
+    return true;
+}
+
+private CreateProfessor createProfessor(int id, String name, String department) {
+    return new CreateProfessor(id, name, department);
+}
+
+private void saveProfessorToMongo(CreateProfessor professor) {
+    ProfessorToMongo.uploadProfessorData(professor);
+}
+
+private void showSuccessMessage(String message) {
+    JOptionPane.showMessageDialog(this, message);
+}
+
+private void showErrorMessage(String message) {
+    JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE);
+}
+
+private void resetTextColors() {
+    txtId.setForeground(java.awt.Color.BLACK);
+    txtFullNameProfessor.setForeground(java.awt.Color.BLACK);
+}
+    
     private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
          String idTextProfessor = txtId.getText();
          ValidateData.validateIdIsInteger(idTextProfessor, txtId);
