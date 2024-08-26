@@ -56,16 +56,13 @@ ec\edu\espe\academygradesystemfrm\view\FrmDeleteProfessor$1.class
 ec\edu\espe\academygradesystemfrm\view\FrmReadProfessor$3.class
 ec\edu\espe\academygradesystemfrm\controller\ValidateData.class
 ec\edu\espe\academygradesystemfrm\view\FrmCreateProfessor.class
-ec\edu\espe\academygradesystemfrm\utils\DeleteUserToMongo.class
 ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeRegister$4.class
 ec\edu\espe\academygradesystemfrm\view\FrmDeleteStudent$1.class
 ec\edu\espe\academygradesystemfrm\view\FrmDeleteStudent$2.class
-ec\edu\espe\academygradesystemfrm\controller\CreateUserController.class
 ec\edu\espe\academygradesystemfrm\view\FrmReadStudentGrade.class
 ec\edu\espe\academygradesystemfrm\view\FrmUpdateStudent$3.class
 ec\edu\espe\academygradesystemfrm\view\FrmDeleteStudentGrade$2.class
 ec\edu\espe\academygradesystemfrm\view\FrmDeleteStudentGrade.class
-ec\edu\espe\academygradesystemfrm\controller\DeleteUserController.class
 ec\edu\espe\academygradesystemfrm\view\FrmReadProfessor$2.class
 ec\edu\espe\academygradesystemfrm\view\FrmUpdateStudentGrade.class
 ec\edu\espe\academygradesystemfrm\view\FrmUpdateStudentGrade$1.class

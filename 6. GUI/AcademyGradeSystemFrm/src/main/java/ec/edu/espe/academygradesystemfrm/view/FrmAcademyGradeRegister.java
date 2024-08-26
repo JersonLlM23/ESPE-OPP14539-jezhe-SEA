@@ -30,6 +30,7 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuAcademyGradeRegister = new javax.swing.JMenu();
         itmLogout = new javax.swing.JMenuItem();
@@ -59,7 +60,7 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(204, 255, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\IAEN\\Documents\\Git\\ESPE-OPP14539-jezhe-SEA\\6. GUI\\AcademyGradeSystemFrm\\src\\main\\java\\ec\\edu\\espe\\academygradesystemfrm\\view\\resources\\AcademyGradeSystem Img1.jpeg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/academygradesystemfrm/view/resources/report card.png"))); // NOI18N
 
         mnuAcademyGradeRegister.setText("HOME");
 
@@ -195,7 +196,12 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         });
         mnuReport.add(itmGenerateStudentReport);
 
-        itmEvaluateStudent.setText("Evaluar Estudiante");
+        itmEvaluateStudent.setText("Crear documento");
+        itmEvaluateStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmEvaluateStudentActionPerformed(evt);
+            }
+        });
         mnuReport.add(itmEvaluateStudent);
 
         jMenuBar1.add(mnuReport);
@@ -220,11 +226,16 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addGap(48, 48, 48)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(41, 41, 41))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1)
+            .addComponent(jLabel2)
         );
 
         pack();
@@ -333,6 +344,10 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
 
     }//GEN-LAST:event_itmLogoutActionPerformed
 
+    private void itmEvaluateStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmEvaluateStudentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmEvaluateStudentActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -386,6 +401,7 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
     private javax.swing.JMenuItem itmUpdateStudent;
     private javax.swing.JMenuItem itmUpdateStudentGrade;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
