@@ -9,7 +9,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import ec.edu.espe.academygradesystemfrm.model.CreateProfessor;
+import ec.edu.espe.academygradesystemfrm.model.Professor;
 import org.bson.Document;
 
 /**
@@ -19,75 +19,71 @@ import org.bson.Document;
 public class ProfessorToMongo {
     private MongoDatabase database;
     private MongoClient mongoClient;
-
-    // constructor para inicializar la conexión a MongoDB
-    public ProfessorToMongo() {
-        mongoClient = createMongoClient();
-        database = mongoClient.getDatabase("AcademyGradeRegister");
-    }
-
     private static MongoClient createMongoClient() {
-        String connectionString = "mongodb+srv://jezhe:jezheoop@cluster0.6vuzzwl.mongodb.net/";
-        ServerApi serverApi = ServerApi.builder().version(ServerApiVersion.V1).build();
+    String connectionString = "mongodb+srv://jezhe:jezheoop@cluster0.6vuzzwl.mongodb.net/";
+        ServerApi serverApi = ServerApi.builder().version(ServerApiVersion.V1).build();        
         MongoClientSettings settings = MongoClientSettings.builder()
                 .applyConnectionString(new ConnectionString(connectionString)).serverApi(serverApi).build();
         return MongoClients.create(settings);
     }
+public static Professor getProfessorById(int professorId) {
+        Professor professor = null;
+    
+    try (MongoClient mongoClient = createMongoClient()) {
+        MongoDatabase database = mongoClient.getDatabase("AcademyGradeRegister");
+        MongoCollection<Document> collection = database.getCollection("professors");
+        
+        Document query = new Document("id", professorId);
+        Document professorDocument = collection.find(query).first();
+        
+        if (professorDocument != null) {
+            String name = professorDocument.getString("Nombre");
+            String department = professorDocument.getString("Departamento");
 
-    public CreateProfessor getProfessorById(int professorId) {
-        CreateProfessor professor = null;
-
-        try {
-            MongoCollection<Document> collection = database.getCollection("professors");
-
-            Document query = new Document("id", professorId);
-            Document professorDocument = collection.find(query).first();
-
-            if (professorDocument != null) {
-                String name = professorDocument.getString("Nombre");
-                String department = professorDocument.getString("Departamento");
-
-                // Verificar y depurar
-                if (department == null) {
-                    System.out.println("Departamento es null para el ID de profesor: " + professorId);
-                } else {
-                    System.out.println("Nombre: " + name + ", Departamento: " + department);
-                    professor = new CreateProfessor(professorId, name, department);
-                }
+            // Verificar y depurar
+            if (department == null) {
+                System.out.println("Departamento es null para el ID de profesor: " + professorId);
+            } else {
+                System.out.println("Nombre: " + name + ", Departamento: " + department);
+                professor = new Professor(professorId, name, department);
             }
-        } catch (MongoException e) {
-            e.printStackTrace();
         }
-        return professor;
+    } catch (MongoException e) {
+        e.printStackTrace();
     }
+    return professor;
+}
 
-    public void uploadProfessorData(CreateProfessor professor) {
-        try {
+
+    public static void uploadProfessorData(Professor professor){
+        try(MongoClient mongoClient = createMongoClient()){
+            MongoDatabase database = mongoClient.getDatabase("AcademyGradeRegister");
+            
             saveProfessorToDatabase(professor, database);
-        } catch (Exception e) {
+        
+        }catch(Exception e){
             e.printStackTrace();
         }
     }
-
-    private void saveProfessorToDatabase(CreateProfessor professor, MongoDatabase database) {
+     private static void saveProfessorToDatabase(Professor professor, MongoDatabase database){
         MongoCollection<Document> collection = database.getCollection("professors");
         Document professorsDocument = new Document("id", professor.getId())
                 .append("Nombre", professor.getName())
                 .append("Departamento", professor.getDepartment());
-
-        try {
+                
+        try{
             collection.insertOne(professorsDocument);
             System.out.println("Profesor guardado exitosamente!!");
-        } catch (MongoException e) {
+        }catch(MongoException e){
             e.printStackTrace();
         }
+        
     }
-
-    public MongoCollection<Document> getCollection(String collectionName) {
+        public MongoCollection<Document> getCollection(String collectionName){
         return database.getCollection(collectionName);
     }
-
-    public void closeConnection() {
+    
+    public void closeConnection(){
         mongoClient.close();
     }
 }

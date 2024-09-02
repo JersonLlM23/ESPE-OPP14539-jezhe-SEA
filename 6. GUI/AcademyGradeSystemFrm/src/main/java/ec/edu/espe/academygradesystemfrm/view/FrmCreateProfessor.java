@@ -1,7 +1,7 @@
 package ec.edu.espe.academygradesystemfrm.view;
 
 import ec.edu.espe.academygradesystemfrm.controller.ValidateData;
-import ec.edu.espe.academygradesystemfrm.model.CreateProfessor;
+import ec.edu.espe.academygradesystemfrm.model.Professor;
 import ec.edu.espe.academygradesystemfrm.utils.ProfessorToMongo;
 import javax.swing.JOptionPane;
 
@@ -218,7 +218,7 @@ public class FrmCreateProfessor extends javax.swing.JFrame {
         String name = txtFullNameProfessor.getText();
         String department = txtDeparment.getText();
 
-        CreateProfessor professor = createProfessor(id, name, department);
+        Professor professor = createProfessor(id, name, department);
         saveProfessorToMongo(professor);
 
         showSuccessMessage("Professor successfully registered");
@@ -240,11 +240,11 @@ public class FrmCreateProfessor extends javax.swing.JFrame {
     return true;
 }
 
-private CreateProfessor createProfessor(int id, String name, String department) {
-    return new CreateProfessor(id, name, department);
+private Professor createProfessor(int id, String name, String department) {
+    return new Professor(id, name, department);
 }
 
-private void saveProfessorToMongo(CreateProfessor professor) {
+private void saveProfessorToMongo(Professor professor) {
     ProfessorToMongo.uploadProfessorData(professor);
 }
 

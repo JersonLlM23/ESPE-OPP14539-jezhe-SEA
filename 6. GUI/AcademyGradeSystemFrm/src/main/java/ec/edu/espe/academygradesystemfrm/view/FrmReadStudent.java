@@ -4,7 +4,7 @@ import com.mongodb.MongoException;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import ec.edu.espe.academygradesystemfrm.model.CreateStudent;
+import ec.edu.espe.academygradesystemfrm.model.Student;
 import ec.edu.espe.academygradesystemfrm.utils.StudentToMongo;
 import ec.edu.espe.academygradesystemfrm.view.FrmAcademyGradeRegister;
 import javax.swing.JDialog;
@@ -246,7 +246,7 @@ public class FrmReadStudent extends javax.swing.JFrame {
                 int studentId = Integer.parseInt(txtIdStudent.getText());
 
                 // Buscar el estudiante en la base de datos
-                CreateStudent student = StudentToMongo.getStudentById(studentId);
+                Student student = StudentToMongo.getStudentById(studentId);
 
                 // Si se encuentra el estudiante, actualizar los JLabels
                 if (student != null) {

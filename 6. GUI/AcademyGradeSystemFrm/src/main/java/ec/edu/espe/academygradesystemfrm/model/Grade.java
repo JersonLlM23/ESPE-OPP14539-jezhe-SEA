@@ -8,7 +8,7 @@ package ec.edu.espe.academygradesystemfrm.model;
  *
  * @author Jerson Llumiquinga M. - TEAM: JEZHEA S.E.A
  */
-public class AddGrades {
+public class Grade {
     double nota1;
     double nota2;
     double nota3;
@@ -37,7 +37,7 @@ public class AddGrades {
         this.nota3 = nota3;
     }
 
-    public AddGrades(double nota1, double nota2, double nota3) {
+    public Grade(double nota1, double nota2, double nota3) {
         this.nota1 = nota1;
         this.nota2 = nota2;
         this.nota3 = nota3;

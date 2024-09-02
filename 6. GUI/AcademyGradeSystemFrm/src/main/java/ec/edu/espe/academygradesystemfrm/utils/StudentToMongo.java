@@ -13,7 +13,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import ec.edu.espe.academygradesystemfrm.model.CreateStudent;
+import ec.edu.espe.academygradesystemfrm.model.Student;
 import org.bson.Document;
 
 /**
@@ -30,8 +30,8 @@ public class StudentToMongo {
                 .applyConnectionString(new ConnectionString(connectionString)).serverApi(serverApi).build();
         return MongoClients.create(settings);
     }
-    public static CreateStudent getStudentById(int studentId) {
-    CreateStudent student = null;
+    public static Student getStudentById(int studentId) {
+    Student student = null;
     
     try (MongoClient mongoClient = createMongoClient()) {
         MongoDatabase database = mongoClient.getDatabase("AcademyGradeRegister");
@@ -45,7 +45,7 @@ public class StudentToMongo {
             String degree = studentDocument.getString("grado");
             int age = studentDocument.getInteger("edad");
             
-            student = new CreateStudent(studentId, name, degree, age);
+            student = new Student(studentId, name, degree, age);
         }
     } catch (MongoException e) {
         e.printStackTrace();
@@ -54,7 +54,7 @@ public class StudentToMongo {
     return student;
 }
 
-    public static void uploadSudentData(CreateStudent student){
+    public static void uploadSudentData(Student student){
         try(MongoClient mongoClient = createMongoClient()){
             MongoDatabase database = mongoClient.getDatabase("AcademyGradeRegister");
             
@@ -65,7 +65,7 @@ public class StudentToMongo {
         }
     }
     
-    private static void saveStudentToDatabase(CreateStudent student, MongoDatabase database){
+    private static void saveStudentToDatabase(Student student, MongoDatabase database){
         MongoCollection<Document> collection = database.getCollection("students");
         Document studentDocument = new Document("id", student.getId())
                 .append("nombre", student.getName())

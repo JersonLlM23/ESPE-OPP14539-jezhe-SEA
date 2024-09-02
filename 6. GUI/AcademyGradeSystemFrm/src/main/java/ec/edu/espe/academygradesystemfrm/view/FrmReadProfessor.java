@@ -4,7 +4,7 @@
  */
 package ec.edu.espe.academygradesystemfrm.view;
 
-import ec.edu.espe.academygradesystemfrm.model.CreateProfessor;
+import ec.edu.espe.academygradesystemfrm.model.Professor;
 import ec.edu.espe.academygradesystemfrm.utils.ProfessorToMongo;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
@@ -211,7 +211,7 @@ public class FrmReadProfessor extends javax.swing.JFrame {
     protected Void doInBackground() throws Exception {
         try {
             int professorId = Integer.parseInt(txtProfessor.getText());
-            CreateProfessor professor = ProfessorToMongo.getProfessorById(professorId);
+            Professor professor = ProfessorToMongo.getProfessorById(professorId);
 
             if (professor != null) {
                 // Actualizar los JLabels en el hilo de la interfaz de usuario
@@ -241,7 +241,7 @@ public class FrmReadProfessor extends javax.swing.JFrame {
     protected void done() {
         loadingDialog.dispose();
     }
-};
+        };
 
 
     // Mostrar el diálogo de carga y ejecutar el SwingWorker
