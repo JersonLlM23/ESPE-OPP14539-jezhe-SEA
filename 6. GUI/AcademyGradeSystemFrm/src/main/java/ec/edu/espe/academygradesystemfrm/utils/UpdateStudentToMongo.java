@@ -15,21 +15,21 @@ import org.bson.Document;
  * @author Lainez Ricardo JEZHE SEA - ESPE
  */
 public class UpdateStudentToMongo {
-
-    public UpdateStudentToMongo(String studentId, String newData){
-        MongoDatabase database = MongoDBConnectionManager.getInstance().getDatabase();
-        MongoCollection<Document> collection = database.getCollection("students");
+    private MongoClient mongoClient;
+    private MongoDatabase database;
+    
+    
+    public UpdateStudentToMongo(){
+        mongoClient = MongoClients.create("mongodb+srv://jezhe:jezheoop@cluster0.6vuzzwl.mongodb.net/");
+        database = mongoClient.getDatabase("AcademyGradeRegister");
+                       
     }
     
-    Document query = new Document("id", studentId);
-        Document updateOperation = new Document("$set", updatedData);
-
-        try {
-            collection.updateOne(query, updateOperation);
-            System.out.println("Estudiante actualizado exitosamente!!");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public MongoDatabase getDatabase(){
+        return database;
+    }
+    public void close(){
+        mongoClient.close();
     }
     
 }
