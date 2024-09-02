@@ -79,6 +79,7 @@ ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeRegister$3.class
 ec\edu\espe\academygradesystemfrm\view\FrmCreateProfessor$2.class
 ec\edu\espe\academygradesystemfrm\view\FrmLogIn$5.class
 ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeRegister$12.class
+ec\edu\espe\academygradesystemfrm\utils\MongoDBConnectionManager.class
 ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeRegister$6.class
 ec\edu\espe\academygradesystemfrm\view\FrmDeleteProfessor.class
 ec\edu\espe\academygradesystemfrm\view\FrmAcademyGradeSystemSplash$2.class
