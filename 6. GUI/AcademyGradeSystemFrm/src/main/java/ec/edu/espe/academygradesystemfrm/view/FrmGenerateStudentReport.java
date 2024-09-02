@@ -112,6 +112,7 @@ private void loadStudentReport() {
             }
         });
 
+        jScrollPane1.setBackground(new java.awt.Color(51, 153, 255));
         jScrollPane1.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
             }

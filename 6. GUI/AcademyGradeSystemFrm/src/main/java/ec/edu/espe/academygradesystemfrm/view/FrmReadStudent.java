@@ -48,6 +48,7 @@ public class FrmReadStudent extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel1.setText("DATOS DEL ESTUDIANTE");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -67,6 +68,7 @@ public class FrmReadStudent extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
+        lblIdStudent.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblIdStudent.setText("Ingrese el ID del estudiante: ");
 
         txtIdStudent.addActionListener(new java.awt.event.ActionListener() {
@@ -75,6 +77,8 @@ public class FrmReadStudent extends javax.swing.JFrame {
             }
         });
 
+        btnAccept.setBackground(new java.awt.Color(51, 153, 255));
+        btnAccept.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnAccept.setText("Aceptar");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,10 +86,13 @@ public class FrmReadStudent extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setText("Grado:");
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel5.setText("Edad: ");
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setText("Nombre y Apellido: ");
 
         jLabel3.setText("...");
@@ -165,9 +172,11 @@ public class FrmReadStudent extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        btnAcademyGradeRegister.setBackground(new java.awt.Color(51, 153, 255));
+        btnAcademyGradeRegister.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnAcademyGradeRegister.setText("Regresar al menú");
         btnAcademyGradeRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,8 +196,7 @@ public class FrmReadStudent extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnAcademyGradeRegister)
+                .addComponent(btnAcademyGradeRegister, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

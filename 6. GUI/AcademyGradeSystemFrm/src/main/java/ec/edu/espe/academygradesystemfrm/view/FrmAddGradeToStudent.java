@@ -116,7 +116,7 @@ public class FrmAddGradeToStudent extends javax.swing.JFrame {
             }
         });
 
-        btnCalcularPromedio.setBackground(new java.awt.Color(0, 102, 255));
+        btnCalcularPromedio.setBackground(new java.awt.Color(51, 153, 255));
         btnCalcularPromedio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnCalcularPromedio.setText("Calcular Promedio");
         btnCalcularPromedio.addActionListener(new java.awt.event.ActionListener() {

@@ -22,26 +22,9 @@ import org.bson.Document;
  */
 
 public class UserToMongo {
-    private MongoDatabase database;
-    private MongoClient mongoClient;
-    private static MongoClient createMongoClient() {
-    String connectionString = "mongodb+srv://jezhe:jezheoop@cluster0.6vuzzwl.mongodb.net/";
-        ServerApi serverApi = ServerApi.builder().version(ServerApiVersion.V1).build();        
-        MongoClientSettings settings = MongoClientSettings.builder()
-                .applyConnectionString(new ConnectionString(connectionString)).serverApi(serverApi).build();
-        return MongoClients.create(settings);
-    }
-     public static void uploadUserData(CreateUser user){
-        try(MongoClient mongoClient = createMongoClient()){
-            MongoDatabase database = mongoClient.getDatabase("AcademyGradeRegister");
-            
-            
-            
-            saveUserToDatabase(user, database);
-        
-        }catch(Exception e){
-            e.printStackTrace();
-        }
+    public static void uploadUserData(CreateUser user){
+        MongoDatabase database = MongoDBConnectionManager.getInstance().getDatabase();
+        saveUserToDatabase(user, database);
     }
      private static void saveUserToDatabase(CreateUser user, MongoDatabase database){
         MongoCollection<Document> collection = database.getCollection("users");
@@ -64,12 +47,4 @@ public class UserToMongo {
         }
         return encrypted.toString();
     } 
-     
-        public MongoCollection<Document> getCollection(String collectionName){
-        return database.getCollection(collectionName);
-    }
-    
-    public void closeConnection(){
-        mongoClient.close();
-    }
 }
