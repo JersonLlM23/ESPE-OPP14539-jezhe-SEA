@@ -10,12 +10,12 @@ import org.bson.Document;
  *
  * @author Jerson Llumiquinga M. - TEAM: JEZHEA S.E.A
  */
-public class CreateUser {
+public class User {
     private int id;
     private String username ;
     private String password;
 
-    public CreateUser(int id, String username, String password) {
+    public User(int id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;

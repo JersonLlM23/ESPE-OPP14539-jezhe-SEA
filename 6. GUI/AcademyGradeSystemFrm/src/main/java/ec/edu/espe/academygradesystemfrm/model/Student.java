@@ -9,13 +9,13 @@ package ec.edu.espe.academygradesystemfrm.model;
  * @author Lainez Ricardo JEZHE SEA - ESPE
  */
 
-public class CreateStudent {
+public class Student {
     private int id;
     private String name;
     private String degree;
     private int age;
     
-    public CreateStudent(int id, String name, String degree, int age) {
+    public Student(int id, String name, String degree, int age) {
         this.id = id;
         this.name = name;
         this.degree = degree;

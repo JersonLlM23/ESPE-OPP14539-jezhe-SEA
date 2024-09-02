@@ -4,7 +4,7 @@
  */
 package ec.edu.espe.academygradesystemfrm.view;
 
-import ec.edu.espe.academygradesystemfrm.model.CreateStudent;
+import ec.edu.espe.academygradesystemfrm.model.Student;
 import ec.edu.espe.academygradesystemfrm.utils.StudentToMongo;
 import java.awt.Color;
 import javax.swing.JOptionPane;
@@ -227,7 +227,7 @@ public class FrmCreateStudent extends javax.swing.JFrame {
             int age = AgeCalculator.calculateAge(birthDate);
 
         // Crear y guardar el estudiante
-        CreateStudent student = new CreateStudent(id, name, degree, age);
+        Student student = new Student(id, name, degree, age);
         StudentToMongo.uploadSudentData(student);
 
         JOptionPane.showMessageDialog(this, "¡Estudiante registrado exitosamente!");

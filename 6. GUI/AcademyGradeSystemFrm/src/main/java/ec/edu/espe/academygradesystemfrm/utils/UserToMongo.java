@@ -13,7 +13,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import ec.edu.espe.academygradesystemfrm.model.CreateUser;
+import ec.edu.espe.academygradesystemfrm.model.User;
 import org.bson.Document;
 
 /**
@@ -22,11 +22,34 @@ import org.bson.Document;
  */
 
 public class UserToMongo {
+<<<<<<< HEAD
     public static void uploadUserData(CreateUser user){
         MongoDatabase database = MongoDBConnectionManager.getInstance().getDatabase();
         saveUserToDatabase(user, database);
+=======
+    private MongoDatabase database;
+    private MongoClient mongoClient;
+    private static MongoClient createMongoClient() {
+    String connectionString = "mongodb+srv://jezhe:jezheoop@cluster0.6vuzzwl.mongodb.net/";
+        ServerApi serverApi = ServerApi.builder().version(ServerApiVersion.V1).build();        
+        MongoClientSettings settings = MongoClientSettings.builder()
+                .applyConnectionString(new ConnectionString(connectionString)).serverApi(serverApi).build();
+        return MongoClients.create(settings);
     }
-     private static void saveUserToDatabase(CreateUser user, MongoDatabase database){
+     public static void uploadUserData(User user){
+        try(MongoClient mongoClient = createMongoClient()){
+            MongoDatabase database = mongoClient.getDatabase("AcademyGradeRegister");
+            
+            
+            
+            saveUserToDatabase(user, database);
+        
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+>>>>>>> 988aef1271d191a6a28be10fe99ee7afeaa820cf
+    }
+     private static void saveUserToDatabase(User user, MongoDatabase database){
         MongoCollection<Document> collection = database.getCollection("users");
         Document professorsDocument = new Document("id", user.getId())
                 .append("Nombre de usuario", user.getUsername())
