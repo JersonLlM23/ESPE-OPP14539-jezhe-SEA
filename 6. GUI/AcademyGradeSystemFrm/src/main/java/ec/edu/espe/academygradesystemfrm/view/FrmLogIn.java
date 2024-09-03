@@ -4,7 +4,7 @@
  */
 package ec.edu.espe.academygradesystemfrm.view;
 
-import ec.edu.espe.academygradesystemfrm.model.CreateUser;
+import ec.edu.espe.academygradesystemfrm.model.User;
 import ec.edu.espe.academygradesystemfrm.utils.UserToMongo;
 import java.awt.Color;
 import javax.swing.JOptionPane;
@@ -292,7 +292,7 @@ public class FrmLogIn extends javax.swing.JFrame {
 
         int id = generateUniqueId(); 
 
-        CreateUser user = new CreateUser(id, username, password);
+        User user = new User(id, username, password);
 
         UserToMongo.uploadUserData(user);
 

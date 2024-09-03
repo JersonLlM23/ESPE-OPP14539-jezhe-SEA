@@ -60,27 +60,39 @@ private void loadStudentReport() {
     tableModel.setRowCount(0);
 
     for (Document grade : grades) {
-        String studentId = grade.getString("studentId");
-        String materia = grade.getString("materia");
-       
-        Double promedio = grade.getDouble("promedio");
-        String estado = grade.getString("estado");
+    String studentId = grade.getString("studentId");
+    String materia = grade.getString("materia");
+   
+    Double promedio = grade.getDouble("promedio");
+    String estado = grade.getString("estado");
 
-        // Convert studentId to integer if necessary
-        int studentIdInt = Integer.parseInt(studentId);
-        System.out.println("Buscando estudiante con ID: " + studentIdInt);
-
-        // Find the corresponding student document using "id"
-        Document student = studentsCollection.find(Filters.eq("id", studentIdInt)).first();
-        if (student != null) {
-            System.out.println("Estudiante encontrado: " + student.getString("nombre"));
+    // Verificar si studentId no es nulo ni vacío antes de convertirlo
+    int studentIdInt = 0;
+    try {
+        if (studentId != null && !studentId.isEmpty()) {
+            studentIdInt = Integer.parseInt(studentId);
         } else {
-            System.out.println("No se encontró estudiante con ID: " + studentIdInt);
+            System.out.println("El studentId está vacío o es nulo. Se omite este registro.");
+            continue; // Salta al siguiente ciclo si el ID del estudiante es inválido
         }
-        String studentName = student != null ? student.getString("nombre") : "N/A";
+    } catch (NumberFormatException e) {
+        System.out.println("Error al convertir studentId a entero: " + e.getMessage());
+        continue; // Salta al siguiente ciclo si hay una excepción
+    }
 
-        // Add row to table model
-        tableModel.addRow(new Object[]{studentId, studentName, materia, promedio, estado});
+    System.out.println("Buscando estudiante con ID: " + studentIdInt);
+
+    // Find the corresponding student document using "id"
+    Document student = studentsCollection.find(Filters.eq("id", studentIdInt)).first();
+    if (student != null) {
+        System.out.println("Estudiante encontrado: " + student.getString("nombre"));
+    } else {
+        System.out.println("No se encontró estudiante con ID: " + studentIdInt);
+    }
+    String studentName = student != null ? student.getString("nombre") : "N/A";
+
+    // Add row to table model
+    tableModel.addRow(new Object[]{studentId, studentName, materia, promedio, estado});
     }
 
     mongoClient.close();
@@ -112,6 +124,7 @@ private void loadStudentReport() {
             }
         });
 
+        jScrollPane1.setBackground(new java.awt.Color(51, 153, 255));
         jScrollPane1.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
             }
@@ -122,6 +135,7 @@ private void loadStudentReport() {
             }
         });
 
+        jTable1.setBackground(new java.awt.Color(204, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},

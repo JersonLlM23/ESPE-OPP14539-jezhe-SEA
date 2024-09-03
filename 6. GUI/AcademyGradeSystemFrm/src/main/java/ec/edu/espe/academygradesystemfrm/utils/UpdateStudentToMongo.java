@@ -22,9 +22,7 @@ public class UpdateStudentToMongo {
     public UpdateStudentToMongo(){
         mongoClient = MongoClients.create("mongodb+srv://jezhe:jezheoop@cluster0.6vuzzwl.mongodb.net/");
         database = mongoClient.getDatabase("AcademyGradeRegister");
-        
-                
-                
+                       
     }
     
     public MongoDatabase getDatabase(){

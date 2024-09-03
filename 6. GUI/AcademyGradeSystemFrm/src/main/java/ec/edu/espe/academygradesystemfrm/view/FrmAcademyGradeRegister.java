@@ -59,8 +59,6 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(204, 255, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\IAEN\\Documents\\Git\\ESPE-OPP14539-jezhe-SEA\\6. GUI\\AcademyGradeSystemFrm\\src\\main\\java\\ec\\edu\\espe\\academygradesystemfrm\\view\\resources\\AcademyGradeSystem Img1.jpeg")); // NOI18N
-
         mnuAcademyGradeRegister.setText("HOME");
 
         itmLogout.setText("Cerrar Sesión");
@@ -195,7 +193,12 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         });
         mnuReport.add(itmGenerateStudentReport);
 
-        itmEvaluateStudent.setText("Evaluar Estudiante");
+        itmEvaluateStudent.setText("Crear documento");
+        itmEvaluateStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmEvaluateStudentActionPerformed(evt);
+            }
+        });
         mnuReport.add(itmEvaluateStudent);
 
         jMenuBar1.add(mnuReport);
@@ -220,11 +223,15 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addContainerGap(384, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addGap(297, 297, 297))
         );
 
         pack();
@@ -332,6 +339,10 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         frmLogIn.setVisible(true);
 
     }//GEN-LAST:event_itmLogoutActionPerformed
+
+    private void itmEvaluateStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmEvaluateStudentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmEvaluateStudentActionPerformed
 
     /**
      * @param args the command line arguments
